@@ -1,0 +1,487 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&family=Varela+Round&display=swap");
+@keyframes appear-vertical {
+  0% {
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+@keyframes appear-horizontal {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(100%);
+  }
+}
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  max-width: 1440px;
+  margin: auto;
+  font-size: 100%;
+  font-family: "Mukta", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "dejavu_serifbold";
+  src: url("fonts/dejavuserif_bold/fonts/DejaVuSerif-Bold-webfont.eot");
+  src: url("fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.woff2") format("woff2"), url("fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.woff") format("woff"), url("fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.ttf") format("truetype"), url("fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.svg#dejavu_serifbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+header h1 {
+  font-family: "Krona One", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+header h1 #eco {
+  color: #81b838;
+}
+header h1 #arava {
+  color: #21881d;
+}
+header .logo-h2 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #3e9a13;
+  text-transform: lowercase;
+  text-align: center;
+}
+header .nav i {
+  font-size: 1.4rem;
+  color: white;
+}
+header .nav-menu {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+header .nav-menu-link {
+  color: #81b838;
+}
+
+footer {
+  color: #694a36;
+}
+footer h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+footer li, footer p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 0.9rem;
+  text-align: justify;
+}
+footer a {
+  color: #694a36;
+}
+footer a:hover, footer a:focus {
+  color: #261b13;
+}
+
+.landing a {
+  font-size: 0.9rem;
+  color: #327319;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.contact input, .contact textarea {
+  font-family: "Mukta", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #327319;
+}
+.contact::placeholder {
+  color: rgba(50, 115, 25, 0.8);
+}
+.contact form h2 {
+  color: #81b838;
+}
+.contact .btn-send {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.btn-footer {
+  border: none;
+  background: radial-gradient(farthest-corner at 5% 5%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #694a36;
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 6px 12px;
+  margin: 10px 10px 0 0;
+}
+.btn-footer:hover, .btn-footer:focus {
+  box-shadow: inset 1px 1px 1px #694a36;
+}
+.btn-footer a {
+  color: #694a36;
+}
+.btn-send {
+  border: none;
+  background: radial-gradient(farthest-corner at 5% 5%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #81b838;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 6px 35px;
+  margin: 10px 10px 0 0;
+}
+.btn-send:hover, .btn-send:focus {
+  box-shadow: inset 1px 1px 1px #81b838;
+}
+
+.tag {
+  border: none;
+  background: radial-gradient(farthest-corner at 5% 5%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px #81b838;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 6px 14px;
+  margin: 10px 10px 0 0;
+  color: #81b838;
+}
+.tag:hover, .tag:focus {
+  box-shadow: inset 1px 1px 1px #81b838;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #81b838;
+  box-shadow: 0 1px 6px #909090;
+}
+header .logo {
+  align-self: center;
+  width: 100%;
+  background-color: white;
+  border-bottom: 2px #81b838 solid;
+  border-bottom-right-radius: 170px 80px;
+  padding: 10px 0;
+}
+header .logo img {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  width: 84px;
+  height: 70px;
+  margin-left: -42px;
+}
+header .logo h1 {
+  margin-top: 72px;
+  margin-bottom: -9px;
+}
+header .logo h2 {
+  transition: 250ms ease-in-out;
+}
+header .nav {
+  position: absolute;
+  z-index: 1;
+  bottom: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #81b838;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: 250ms ease-in-out;
+}
+header .nav-btn-line {
+  height: 3px;
+  width: 20px;
+  background-color: white;
+  margin-bottom: 3px;
+  border-radius: 1px;
+  transition: 150ms;
+}
+header .nav-btn:hover .line2 {
+  width: 24px;
+}
+header .nav-btn:hover .line3 {
+  width: 29px;
+}
+header .nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  width: calc(100% - 170px);
+  padding-bottom: 5px;
+  transform-origin: right;
+  transform: scale(0);
+  transition: transform 500ms;
+}
+header .nav-menu-link {
+  display: block;
+  transform: translateY(0%);
+  transition: 120ms;
+}
+header .nav-menu-link:hover, header .nav-menu-link:focus {
+  transform: translateY(-5%);
+  color: #66912c;
+}
+header .nav #opened-menu {
+  transform: scale(1);
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 100px;
+  padding: 30px 40px;
+  background-image: url(wave2.svg);
+  background-size: cover;
+  background-position: 0 60px;
+  background-repeat: no-repeat;
+}
+footer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+}
+footer .fNav {
+  position: relative;
+  z-index: 1;
+  margin: auto 0;
+}
+footer .fNav-about {
+  grid-row: span 3;
+  margin-top: 0;
+}
+footer .fNav-about p {
+  margin: 5px 0;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+main .landing {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  background-color: transparent;
+  box-shadow: inset 0 0 15px 15px white;
+}
+main .landing img {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  object-fit: cover;
+}
+main .landing-content {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  box-shadow: 0 0 15px 15px white;
+}
+
+/*.landing {
+    display: flex;
+    height: 500px;
+    gap: 0 25px;
+    padding: 35px;
+    &-content {
+        @include box(25%, 100%);
+        &:hover p, &:focus p{
+            box-shadow: 2px 2px 2px $light-grey;
+        }
+        p {
+            height: 12%;
+            width: 85%;
+            background-color: rgba($color: white, $alpha: 0.8);
+            border-radius: 0 4px 4px 0;
+        }
+        &-farm {
+            @include box-bg-image(url(arava-images/arava-hills-and-palms.jpg), 20px);
+        }
+        &-moringa {
+            @include box-bg-image(url(arava-images/moringa-leaves.jpg), 100px);
+
+        }
+    }
+}*/
+input:not([type=submit]), textarea {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+input:not([type=submit]):focus, textarea:focus {
+  outline: none;
+}
+
+.label {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.label-short::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #a6d26b 5%, rgba(255, 255, 255, 0.1));
+}
+.label-high {
+  height: 150px;
+}
+.label-high textarea {
+  height: 150px;
+  resize: none;
+}
+.label-high::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 154px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #a6d26b 5%, rgba(255, 255, 255, 0.1));
+}
+.label-high:hover textarea::placeholder, .label-high:focus textarea::placeholder {
+  font-weight: 600;
+}
+.label:hover input::placeholder, .label:focus input::placeholder {
+  font-weight: 600;
+}
+
+.recipes {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 50px;
+  padding: 25px 45px;
+}
+.recipes-sort {
+  position: relative;
+  flex: 1;
+  margin: -26px 0;
+  padding: 30px 20px 20px 20px;
+  border: none;
+  background-color: none;
+  transform-origin: top center;
+  animation: appear-vertical 350ms ease-in-out 50ms both;
+  color: #327319;
+  max-width: 20%;
+}
+.recipes-sort::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  height: 100%;
+  width: 2px;
+  background-image: linear-gradient(white 15%, #81b838, white 85%);
+}
+.recipes-sort::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  height: 100%;
+  width: 2px;
+  background-image: linear-gradient(white 10%, #81b838, white 90%);
+}
+.recipes-grid-item {
+  width: 150px;
+  height: 150px;
+  background-color: #327319;
+  border-radius: 15px;
+  box-shadow: 0 4px 5px 0 rgba(67, 70, 77, 0.5), 0 -1px 6px #303030 inset, 0 3px 2px rgba(177, 177, 177, 0.678) inset, 0 1px 2px 0 #909090 inset;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 50px;
+  padding: 25px 45px;
+}
+.contact-info {
+  flex: 1;
+  margin: -26px 0;
+  padding: 30px 20px 20px 20px;
+  border: none;
+  background-color: #97cb53;
+  transform-origin: top center;
+  animation: appear-vertical 350ms ease-in-out 50ms both;
+  color: white;
+  max-width: 30%;
+}
+.contact-info-part {
+  display: flex;
+  padding: 30px 0;
+}
+.contact-info-part i:not([class*=fab]) {
+  margin-top: 2px;
+  padding-right: 20px;
+}
+.contact form {
+  flex: 4;
+  transform-origin: center left;
+  animation: appear-horizontal 250ms ease-in-out 200ms both;
+}
+.contact form h2 {
+  padding: 5px 0 20px 0;
+}
+
+/*# sourceMappingURL=style.css.map */

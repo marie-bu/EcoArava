@@ -1,0 +1,16 @@
+.btn {
+    &-footer {
+        @include button($middle-brown, 0.7rem, 400, 12px,);
+        a {
+            color: $middle-brown;
+        }
+    }
+    &-send {
+        @include button($color-quaternary, 1rem, 500, 35px,);
+    }
+}
+
+.tag {
+    @include button($color-quaternary, 0.9rem, 400, 14px);
+    color: $color-quaternary;
+}

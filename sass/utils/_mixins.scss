@@ -1,0 +1,77 @@
+@mixin button($shadowColor, $fontSize, $fontWeight, $paddingHorizontal){
+    border: none;
+    background: radial-gradient(farthest-corner at 5% 5%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px $shadowColor;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    padding: 6px $paddingHorizontal;
+    margin: 10px 10px 0 0;
+    &:hover, &:focus {
+        box-shadow: inset 1px 1px 1px $shadowColor;
+    }
+}
+
+@mixin tag {
+    border : 1px $color-primary solid;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $color-primary;
+    padding: 6px 12px;
+    margin: 10px 10px 0 0;
+    &:hover, &:focus {
+        background-color: $color-primary;
+        color: white;
+    }
+}
+
+@mixin box($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 15px;
+    box-shadow: 2px 3px 6px $light-grey;
+    &:hover, &:focus {
+        box-shadow: inset 2px 2px 5px $light-grey;
+    }
+}
+
+@mixin box-bg-image($url, $top) {
+    position: relative;
+    background-image: $url;
+    background-size: cover;
+    cursor: pointer;
+    p {
+        position: absolute;
+        left: 0; top: $top;
+    }
+}
+
+@mixin fading-border($height) {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -2px; left: -2px;
+        width: 100%;
+        height: $height;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, lighten($color-quaternary, 15%) 5%, rgba(255, 255, 255, 0.1));
+}
+
+@mixin main {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 50px;
+    padding: 25px 45px;
+}
+
+@mixin aside($border, $bg-color, $color) {
+    flex: 1;
+    margin: -26px 0;
+    padding: 30px 20px 20px 20px;
+    border: $border;
+    background-color: $bg-color;
+    transform-origin: top center;
+    animation: appear-vertical 350ms ease-in-out 50ms both;
+    color: $color;
+}

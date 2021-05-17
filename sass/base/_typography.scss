@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&family=Varela+Round&display=swap');
+
+@font-face {
+    font-family: 'dejavu_serifbold';
+    src: url('fonts/dejavuserif_bold/fonts/DejaVuSerif-Bold-webfont.eot');
+    src: url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.woff2') format('woff2'),
+         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.woff') format('woff'),
+         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.ttf') format('truetype'),
+         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.svg#dejavu_serifbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+header {
+    h1 {
+        font-family:"Krona One", sans-serif;
+        font-size: 1rem;
+        text-transform: uppercase;
+        text-align: center;
+        #eco {
+            color: $color-quaternary;
+        }
+        #arava {
+            color: $color-secondary;
+        }
+    }
+    .logo-h2 {
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: $color-tertiary;
+        text-transform: lowercase;
+        text-align: center;
+    }
+    .nav {
+        i {
+            font-size: 1.4rem;
+            color: white;
+        }
+        &-menu {
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1rem;
+            &-link {
+                color: $color-quaternary;
+            }
+        }
+    }
+}
+
+footer {
+    color: $middle-brown;
+    h3 {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    li, p {
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 0.9rem;
+        text-align: justify;
+    }
+    a {
+        color: $middle-brown;
+        &:hover, &:focus {
+            color: darken($color: $middle-brown, $amount: 20)
+        }
+    }
+}
+
+.landing {
+    a {
+        font-size: 0.9rem;
+        color: $color-primary;
+        font-weight: 400;
+        line-height: 1rem;
+    }
+}
+
+.contact {
+    input, textarea {
+        font-family: "Mukta", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: $color-primary;
+    }
+    &::placeholder {
+        color: rgba($color: $color-primary, $alpha: 0.8);
+    }
+    form h2 {
+        color: $color-quaternary;
+    }
+    .btn-send {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+}

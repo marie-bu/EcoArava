@@ -1,0 +1,422 @@
+{
+    "1" : {
+        "id" : 1,
+        "name" : "Energy balls",
+        "image" : "undefined",
+        "type" : "Snack",
+        "level" : "Very easy",
+        "ingredients" : [
+            {   "ingredient" : "Dates",
+                "quantity" : 200,
+                "unit" : "g"
+            },
+            {   "ingredient" : "Oat bran powder",
+                "quantity" : 60,
+                "unit" : "g"
+            },
+            {   "ingredient" : "Almond powder",
+                "quantity" : 60,
+                "unit" : "g"
+            },
+            {   "ingredient" : "Hazelnut powder",
+                "quantity" : 80,
+                "unit" : "g"
+            },
+            {   "ingredient" : "Coconut milk",
+                "quantity" : 4,
+                "unit" : "tbsp"
+            },
+            {   "ingredient" : "Lemon juice",
+                "quantity" : 2,
+                "unit" : "tbsp"
+            },
+            {   "ingredient" : "Fresh ginger",
+                "quantity" : 15,
+                "unit" : "thin slices"
+            },
+            {   "ingredient" : "Coconut shreads"
+            },
+            {   "ingredient" : "Moringa powder",
+                "quantity" : 3,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Stone the dates. Blend them with the fresh ginger, the coconut milk and the lemon juice. Add the oat bran, almond, hazelnut and moringa powders. Mix until it becomes a smooth paste. Shape about 20 balls with your hands and roll them in the coconut shreads."
+    },
+    "2" : {
+        "id" : 2,
+        "name" : "Pomegranate chutney",
+        "image" : "pomegranate-chutney.jpg",
+        "type" : "Seasoning",
+        "level" : "Easy",
+        "ingredients" : [
+            {
+                "ingredient" : "Pomegranate",
+                "quantity" : 1
+            },
+            {
+                "ingredient" : "Apple",
+                "quantity" : 1
+            },
+            {
+                "ingredient" : "Sugar",
+                "quantity" : 3,
+                "unit" : "tbsp"
+            },
+            {
+                "ingredient" : "Fresh ginger",
+                "quantity" : 4,
+                "unit" : "slices"
+            },
+            {
+                "ingredient" : "Cinnamon stick",
+                "quantity" : 1,
+                "unit" : "cm"
+            },
+            {
+                "ingredient" : "Apple vinegar",
+                "quantity" : 1,
+                "unit" : "dash"
+            },
+            {
+                "ingredient" : "Tamaring concentrate",
+                "quantity" : 1,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Cut the apple in dices, take the flesh of pomegranate out, and boil them in a bit of water with the sugar, ginger and cinnamon. After 5 minutes, blend the mix and then drain to remove the seeds of the pomegranate. Then put it back in the saucepan, add the vinegar and tamarind, let it simmer to reduce. When the mix is a bit thick, put aside and let it cool. When it’s at ambient temperature, add the moringa, stir and put in the fridge so that it becomes even thicker."
+    },
+    "3" : {
+        "id" : 3,
+        "name" : "Mixed salad",
+        "image" : "mixed-salad.jpg",
+        "type" : "Entry",
+        "level" : "Easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Fruits"
+            },
+            {
+                "ingredient" : "Vegetables"
+            },
+            {
+                "ingredient" : "Salad sauce"
+            },
+            {
+                "ingredient" : "Fresh ginger"
+            },
+            {
+                "ingredient" : "Fresh turmeric"
+            },
+            {
+                "ingredient" : "Moringa powder"
+            }
+        ],
+        "directions" : "You have many fruits and vegetables in your fridge? Try this easy mixed salad ; all you need is to dice fruits and vegetables of your choice, grate some fresh ginger and some fresh turmeric, add a bit of salad sauce mixed with moringa powder. You can throw in nuts, seeds, anything you like!"
+    },
+    "4" : {
+        "id" : 4,
+        "name" : "Chickpeas and lentils spread",
+        "image" : "chickpeas-spread.jpg",
+        "type" : "Spread",
+        "level" : "Easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Chickpeas",
+                "quantity" : 100,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Coral lentils",
+                "quantity" : 100,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Garlic",
+                "quantity" : 2,
+                "unit" : "cloves"
+            },
+            {
+                "ingredient" : "Mustard seeds",
+                "quantity" : 1,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Chili flakes",
+                "quantity" : "up to taste"
+            },
+            {
+                "ingredient" : "Turmeric powder",
+                "quantity" : 2,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Coriander powder",
+                "quantity" : 2,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Tomato concentrate",
+                "quantity" : 1,
+                "unit" : "tbsp"
+            },
+            {
+                "ingredient" : "Vegetable stock",
+                "quantity" : 5,
+                "unit" : "dl"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Olive oil"
+            },
+            {
+                "ingredient" : "Sesame oil"
+            }
+        ],
+        "directions" : "Leave the chickpeas to soak in water for 12 hours (or use pre-soaked, ready-to-use chickpeas). Then, pour a bit of olive oil in a saucepan, add the chopped garlic, mustard seeds, chilli and turmeric and heat a little bit (not too much so that the spices don’t over heat). Add the chickpeas and lentils, cover well in vegetable stock. Add the coriander and tomato concentrate and make it boil. Then, lower the heat, cover and let it cook for about 20-30 minutes. When it’s cooked, add a bit of sesame oil and blend. Taste, adjust seasoning. If needed, add some oil and/or some water to adjust the consistency. When the mixture is at ambient temperature, add the moringa powder (to benefit from all of its nutrients) and mix."
+    },
+    "5" : {
+        "id" : 5,
+        "name" : "Green peas dip",
+        "image" : "green-peas-dip.jpg",
+        "type" : "Dip",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Green peas",
+                "quantity" : 200,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Olives",
+                "quantity" : 10
+            },
+            {
+                "ingredient" : "Olive oil",
+                "quantity" : 1,
+                "unit" : "tbsp"
+            },
+            {
+                "ingredient" : "Lemon juice",
+                "quantity" : 2,
+                "unit" : "tbsp"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Cook the green peas in water. When it’s done, drain the water and leave the peas to cool. Stone the olives and pour all the ingredients in your blender (better if the peas are not too hot, to keep all the nutrients of the moringa). Blend, taste, salt if needed and leave in the fridge until it’s cold."
+    },
+    "6" : {
+        "id" : 6,
+        "name" : "Salad sauce",
+        "image" : "salad-sauce.jpg",
+        "type" : "Seasoning",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Oil"
+            },
+            {
+                "ingredient" : "Vinegar"
+            },
+            {
+                "ingredient" : "Seasonings"
+            },
+            {
+                "ingredient" : "Moringa powder"
+            }
+        ],
+        "directions" : "The easiest way to add moringa to your diet and to make it extra healthy! The taste of moringa really fits into salad sauces. Up to you to mix the oil(s), vinegar(s) and seasonings of your choice!"
+    },
+    "7" : {
+        "id" : 7,
+        "name" : "Ginger-moringa syrup",
+        "image" : "ginger-syrup.jpg",
+        "type" : "Drinks",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Water",
+                "quantity" : 5,
+                "unit" : "dl"
+            },
+            {
+                "ingredient" : "Sugar",
+                "quantity" : 500,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Fresh ginger",
+                "quantity" : 50,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Slice the ginger, put it in a saucepan with the water and sugar. Boil and let simmer for 10 minutes. Let it cool down. When it’s not hot any more, add the moringa and stir. Pour in a jar, close and store away from heat and sunlight."
+    },
+    "8" : {
+        "id" : 8,
+        "name" : "Chia pudding",
+        "image" : "chia-pudding.jpg",
+        "type" : "Breakfast",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Milk (diary or non-diary)",
+                "quantity" : 4,
+                "unit" : "dl"
+            },
+            {
+                "ingredient" : "Chia seeds",
+                "quantity" : 2,
+                "unit" : "tbsp"
+            },
+            {
+                "ingredient" : "Syrup (ginger or else)",
+                "quantity" : 1,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            },
+            {
+                "ingredient" : "Fruits (optional)"
+            }
+        ],
+        "directions" : "Simply mix the milk of your choice with the syrup and the moringa (you can also just use our ginger-moringa syrup : find our recipe here). Then, add the chia seeds, mix and leave in the fridge for at least 4 hours (you can also simply leave them overnight and you’ll have a very healthy breakfast in the morning!). Add anything you want on top of it (fruits, nuts, chocolate chips…). Here we made one layer of blended mango and one of blended raspberries."
+    },
+    "9" : {
+        "id" : 9,
+        "name" : "Fresh juice",
+        "image" : "fresh-juice.jpg",
+        "type" : "Drinks",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Fresh juice of your choice",
+                "quantity" : 1,
+                "unit" : "glass"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 0.5,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Moringa will energize you like coffee but without caffeine and without stressing the nervous system. Plus, it will add some extra vitamins, minerals and all the amino acids for extra benefits! Tip : if you want to use your moringa but not taste it today, add it to a juice with fruits that have an acidic taste ; it will smooth out the moringa taste (as here with some blood oranges for example)."
+    },
+    "10" : {
+        "id" : 10,
+        "name" : "Fresh moringa drink",
+        "image" : "moringa-drink.jpg",
+        "type" : "Drinks",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Water",
+                "quantity" : 1,
+                "unit" : "l"
+            },
+            {
+                "ingredient" : "Tangerines",
+                "quantity" : 2
+            },
+            {
+                "ingredient" : "Cinnamon stick",
+                "quantity" : 1.5,
+                "unit" : "cm"
+            },
+            {
+                "ingredient" : "Sugar",
+                "quantity" : "up to taste"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Pour a glass of water in a pan with the ginger, cinnamon and sugar. Boil and let it infuse for ten minutes. Squeeze the tangerines. Pour the tangerine juice in a jug, add 1 litre of cold water, the moringa powder and finally the infused water. Mix, add some fresh water if necessary, refrigerate before serving or serve directly on ice!"
+    },
+    "11" : {
+        "id" : 11,
+        "name" : "Cucumber-mint yogurt sauce",
+        "image" : "cucumber-dip.jpg",
+        "type" : "Dip",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Yogurt",
+                "quantity" : 200,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Cucumber",
+                "quantity" : 2,
+                "unit" : "cm"
+            },
+            {
+                "ingredient" : "Fresh mint",
+                "quantity" : 1,
+                "unit" : "handful"
+            },
+            {
+                "ingredient" : "Salt",
+                "quantity" : "up to taste"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Very simply blend the ingredients together. Great with falafels !"
+    },
+    "12" : {
+        "id" : 12,
+        "name" : "Zucchini-moringa dip",
+        "image" : "zucchini-dip.jpg",
+        "type" : "Dip",
+        "level" : "Very easy",
+        "ingredients" :[
+            {
+                "ingredient" : "Yogurt",
+                "quantity" : 300,
+                "unit" : "g"
+            },
+            {
+                "ingredient" : "Zucchini",
+                "quantity" : 1,
+                "unit" : "small"
+            },
+            {
+                "ingredient" : "Salt and pepper",
+                "quantity" : "up to taste"
+            },
+            {
+                "ingredient" : "Moringa powder",
+                "quantity" : 1,
+                "unit" : "tsp"
+            }
+        ],
+        "directions" : "Cut the ends of the zucchini and grate it. Mix it with the yoghurt, salt and moringa. Taste and adjust seasoning. Here we used the dip with home-made vegetarian nuggets (potatoes, chickpeas, chickpea flour, carrot, spring onions, tomato and seasonings)."
+    }
+}

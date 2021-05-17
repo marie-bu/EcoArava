@@ -1,0 +1,21 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    max-width: 1440px;
+    margin: auto;
+    font-size: 100%;
+    font-family: "Mukta", sans-serif;
+  }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}

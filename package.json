@@ -1,0 +1,11 @@
+{
+  "name": "ecoarava",
+  "version": "1.0.0",
+  "description": "",
+  "main": "contentEN.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:style.css"
+  },
+  "author": "Marie-bu",
+  "license": "ISC"
+}
