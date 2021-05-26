@@ -1,0 +1,33 @@
+/*main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 50px;
+    padding: 55px;
+    .h2-article {
+        position: sticky;
+        max-width: 50px;
+        color: $color-primary;
+    }
+}*/
+
+main {
+    display: grid;
+    grid-template-columns: 50px 50px 1fr;
+    grid-template-rows: 100px 1fr;
+    gap: 0 50px;
+    padding: 55px;
+    .h2-article, .btn-aside {
+        position: sticky;
+        top: 20px;
+        color: $color-primary;
+    }
+    aside {
+        grid-column: span 2;
+        grid-row-start: 2;
+    }
+    article {
+        grid-column-start: 3;
+        grid-row: span 2;
+    }
+}

@@ -1,0 +1,33 @@
+.article-nav, .recipes-list {
+    position: sticky;
+    top: 120px;
+    @include aside(200px, min-content, none, white, $color-primary);
+    .nutshell, .h3-search {
+        margin-bottom: 20px;
+    }
+    .read-more, .h3-filters {
+        @include read-more;
+        &::after {
+            @include fading-line(100px, 0px, 1px, 50%, linear-gradient(to right, $color-primary, rgba(255, 255, 255, 0)));
+        }
+    }
+    .anchor-link {
+        @include anchor-link;
+    }
+    .btn-aside-close {
+        position: absolute;
+        top: 5px; right: -40px;
+    }
+    &-closed {
+        display: none;
+        //animation: appear-vertical 350ms ease-in-out 50ms reverse both;
+    }
+}
+
+.farm .article-nav {
+    margin-top: -20px;
+}
+
+.moringa .article-nav {
+    margin-top: 20px;
+}

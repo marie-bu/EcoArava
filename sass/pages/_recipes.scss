@@ -1,36 +1,17 @@
 .recipes {
-    @include main;
-    &-sort {
-        position: relative;
-        @include aside(none, none, $color-primary);
-        max-width: 20%;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0; left: -15px;
-            height: 100%;
-            width: 2px;
-            background-image: linear-gradient(white 15%, $color-quaternary, white 85%);
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0; right: -15px;
-            height: 100%;
-            width: 2px;
-            background-image: linear-gradient(white 10%, $color-quaternary, white 90%);
-        }
+    .article {
+        grid-column-start: 3;
+        color: $color-primary;
     }
-    &-grid {
-        &-item {
-            width: 150px;
-            height: 150px;
-            background-color: $color-primary;
-            border-radius: 15px;
-            box-shadow:   0 4px 5px 0 rgba(67, 70, 77, 0.5),
-            0 -1px 6px $dark-grey inset,
-            0 3px 2px rgba(177, 177, 177, 0.678) inset,
-            0 1px 2px 0 $light-grey inset;
-        }
+    &-instructions {
+        color: $color-primary;
+        margin-left: 70px;
+    }
+    .no-result {
+        display: none;
+        text-align: center;
+    }
+    &-details {
+        display: none;
     }
 }

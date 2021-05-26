@@ -3,7 +3,6 @@ input:not([type="submit"]), textarea {
     height: 40px;
     border: none;
     border-radius: 5px;
-    //background-image: linear-gradient(to right, lighten($color-quaternary, 15%) 5%, rgba(255, 255, 255, 0.1));
     padding: 10px 15px;
     &:focus {
         outline: none;
@@ -33,4 +32,9 @@ input:not([type="submit"]), textarea {
     &:hover input::placeholder, &:focus input::placeholder {
         font-weight: 600;
     }
+}
+#search-icon {
+    position: absolute;
+    top: 12px; right: -10px;
+    cursor: pointer;
 }

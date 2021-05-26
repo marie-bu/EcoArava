@@ -16,14 +16,14 @@
         <div class="logo">
         <a href="index.html">
             <img src="logo.png" alt="Eco Arava Logo">
-            <h1><span id="eco">Eco </span><span id="arava">Arava</span></h1>
+            <h1><span id="eco">Eco</span><span id="arava">Arava</span></h1>
             <h2 class="logo-h2">Eco-friendly farming</h2>
         </a>
         </div>
         <nav class="nav">
             <ul class="nav-menu">
-                <li><a href="#" class="nav-menu-link">The farm</a></li>
-                <li><a href="#" class="nav-menu-link">Moringa</a></li>
+                <li><a href="farm.html" class="nav-menu-link">The farm</a></li>
+                <li><a href="moringa.html" class="nav-menu-link">Moringa</a></li>
                 <li><a href="recipes.html" class="nav-menu-link">Recipes</a></li>
                 <li><a href="https://ecoarava.ecwid.com/" target="_blank" class="nav-menu-link">Shop</a></li>
                 <li><a href="contact.html" class="nav-menu-link">Contact</a></li>
@@ -36,31 +36,36 @@
         </nav>
     </header>
 
-    <main>
-        <section class="recipes">
+    <main class="recipes">
+        <h2 class="h2-article">Recipes with moringa</h2>
+        <button class="btn btn-aside"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
+        <p class="h3 recipes-instructions">Hover over the recipes and click to display the details</p>
+        <section class="article article-narrow">
             <div class="recipes-grid">
-                <div class="recipes-grid-item"></div>
+                <div class="recipes-grid-text no-result"><p>Sorry, we don't have any recipe matching your criteria</p></div>
             </div>
-            <aside class="recipes-sort">
-                <h2>Filter recipes</h2>
-                <div class="recipes-sort-type">
-                    <h3>by type</h3>
-                    <button class="tag" aria-pressed="false">Breakfast</button>
-                    <button class="tag" aria-pressed="false">Dip</button>
-                    <button class="tag" aria-pressed="false">Drinks</button>
-                    <button class="tag" aria-pressed="false">Entry</button>
-                    <button class="tag" aria-pressed="false">Seasoning</button>
-                    <button class="tag" aria-pressed="false">Snack</button>
-                    <button class="tag" aria-pressed="false">Spread</button>
-                </div>
-                <div class="recipes-sort-level">
-                    <h3>by difficulty</h3>
-                    <button class="tag" aria-pressed="false">Very easy</button>
-                    <button class="tag" aria-pressed="false">Easy</button>
-                    <button class="tag" aria-pressed="false">Medium</button>
-                </div>
-            </aside>
+            <div class="recipes-details">
+                <button class="btn btn-close" onclick="closeLightbox()"><em tabindex="-1" class="fas fa-times"></em></button>
+            </div>
         </section>
+        <aside class="recipes-list">
+            <h4 class="h3 h3-search">Search recipes</h4>
+            <button class="btn btn-aside btn-aside-close"><em class="fas fa-angle-up"></em></button>
+            <label class="label label-short">
+                <input type="search" placeholder="Ingredient">
+                <i class="fas fa-search" id="search-icon"></i>
+            </label>
+            <div class="recipes-list-filters">
+                <p class="h3 h3-filters">Filters</p>
+                <button class="tag" aria-pressed="false">Breakfast</button>
+                <button class="tag" aria-pressed="false">Dip</button>
+                <button class="tag" aria-pressed="false">Drink</button>
+                <button class="tag" aria-pressed="false">Entry</button>
+                <button class="tag" aria-pressed="false">Seasoning</button>
+                <button class="tag" aria-pressed="false">Snack</button>
+                <button class="tag" aria-pressed="false">Spread</button>
+            </div>
+        </aside>
     </main>
 
     <footer>
@@ -69,9 +74,9 @@
             <p>We are a family of farmers in the Arava desert and we put our efforts in making our farm eco-friendly and sustainable.</p>
             <p>More :</p>
             <div>
-                <button class="btn-footer"><a href="">Farming in the desert</a></button>
-                <button class="btn-footer"><a href="">Making it sustainable</a></button>
-                <button class="btn-footer"><a href="">Growing Moringa Oleifera</a></button>
+                <button class="btn-footer"><a href="farm.html#desert">Farming in the desert</a></button>
+                <button class="btn-footer"><a href="farm.html#sustain">Making it sustainable</a></button>
+                <button class="btn-footer"><a href="farm.html#growingMoringa">Growing moringa oleifera</a></button>
             </div>
         </div>
         <div class="fNav fNav-shop">
@@ -96,6 +101,6 @@
             <button class="btn-footer"><a href="contact.html">Contact us</a></button>
         </div>
     </footer>
-    
+
 </body>
 </html>

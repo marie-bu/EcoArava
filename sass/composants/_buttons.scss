@@ -1,16 +1,52 @@
 .btn {
     &-footer {
-        @include button($middle-brown, 0.7rem, 400, 12px,);
+        @include button($color-primary, 0.7rem, 400, 12px);
+        background-color: lighten($color: $color-quaternary, $amount: 35%);
         a {
-            color: $middle-brown;
+            color:$color-primary;
         }
     }
     &-send {
-        @include button($color-quaternary, 1rem, 500, 35px,);
+        @include button($color-quaternary, 1.1rem, 500, 35px);
+    }
+    &-close {
+        @include button($color-primary, 1rem, 400, 10px);
+        em {
+            color: $color-primary;
+        }
+    }
+    &-aside {
+        @include button-slide-text(1.2rem, $color-primary, 0, auto, $color-quaternary, none);
+        margin-top: 0;
+        em {
+            &[class$="up"] {
+                display: none;
+            }
+        }
+        &-clicked {
+            @include button-toggle-icon($color-primary, none, $color-quaternary, none);
+        }
+    }
+    &-show-text {
+        @include button-slide-text(inherit, $color-primary, 20px, 10px, $color-quaternary, 1px $color-primary solid);
+        em {
+            @include button-icon-circle;
+            &[class$="up"] {
+                display: none;
+            }
+        }
+        &-clicked {
+            @include button-toggle-icon($color-quaternary, none, $color-primary, none);
+        }
     }
 }
 
 .tag {
-    @include button($color-quaternary, 0.9rem, 400, 14px);
-    color: $color-quaternary;
+    @include button($color-primary, 0.9rem, 400, 14px);
+    background: none;
+    color: $color-primary;
+    &-selected {
+        background-color: lighten($color: $color-quaternary, $amount: 30%);
+        box-shadow: inset 1px 1px 1px $color-primary;
+    }
 }

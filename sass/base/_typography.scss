@@ -2,33 +2,58 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&family=Varela+Round&display=swap');
 
-@font-face {
-    font-family: 'dejavu_serifbold';
-    src: url('fonts/dejavuserif_bold/fonts/DejaVuSerif-Bold-webfont.eot');
-    src: url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.woff2') format('woff2'),
-         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.woff') format('woff'),
-         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.ttf') format('truetype'),
-         url('fonts/dejavuserif_bold/DejaVuSerif-Bold-webfont.svg#dejavu_serifbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&family=Lora:wght@600&family=Montserrat:wght@600&family=Prompt:wght@500&family=Rubik:wght@500&family=Teko:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
+
 
 p {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     font-weight: 400;
     line-height: 1.2rem;
+    text-align: justify;
 }
 
-h2 {
-    font-size: 1.4rem;
+h2, .h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
     font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3, .h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.item-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+figcaption {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    text-align: center;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.anchor-link {
+    font-weight: 600;
 }
 
 header {
     h1 {
-        font-family:"Krona One", sans-serif;
-        font-size: 1rem;
+        font-family: "Lora", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
         text-transform: uppercase;
         text-align: center;
         #eco {
@@ -39,8 +64,9 @@ header {
         }
     }
     .logo-h2 {
-        font-size: 0.9rem;
-        font-weight: 300;
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.67rem;
+        font-weight: 500;
         color: $color-tertiary;
         text-transform: lowercase;
         text-align: center;
@@ -51,9 +77,11 @@ header {
             color: white;
         }
         &-menu {
-            font-size: 1rem;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.8rem;
             font-weight: 600;
-            line-height: 1rem;
+            line-height: 0.8rem;
+            text-transform: uppercase;
             &-link {
                 color: $color-quaternary;
             }
@@ -62,7 +90,7 @@ header {
 }
 
 footer {
-    color: $middle-brown;
+    color: $color-primary;
     h3 {
         font-size: 0.9rem;
         font-weight: 600;
@@ -74,10 +102,7 @@ footer {
         text-align: justify;
     }
     a {
-        color: $middle-brown;
-        &:hover, &:focus {
-            color: darken($color: $middle-brown, $amount: 20)
-        }
+        color: $color-primary;
     }
 }
 
@@ -90,21 +115,16 @@ footer {
     }
 }
 
-.contact {
-    input, textarea {
-        font-family: "Mukta", sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        color: $color-primary;
-    }
+input, textarea {
+    font-family: "Mukta", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-primary;
     &::placeholder {
         color: rgba($color: $color-primary, $alpha: 0.8);
     }
-    form h2 {
-        color: $color-quaternary;
-    }
-    .btn-send {
-        font-size: 1.1rem;
-        font-weight: 500;
-    }
+}
+
+form h2 {
+    color: $color-quaternary;
 }

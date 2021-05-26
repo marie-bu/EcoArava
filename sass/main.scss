@@ -1,13 +1,22 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/keyframes";
+
 @import "./base/base";
 @import "./base/typography";
 @import "./composants/buttons";
+@import "./composants/inputs";
+
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/landing";
-@import "./layout/contactForm";
+@import "./layout/main";
+@import "./layout/aside";
+@import "./layout/article";
+@import "./layout/recipesGrid";
+@import "./layout/lightbox";
+
 @import "./pages/index";
+@import "./pages/farm";
+@import "./pages/moringa";
 @import "./pages/recipes";
 @import "./pages/contact";
