@@ -1,33 +1,49 @@
-.article-nav, .recipes-list {
+aside {
     position: sticky;
-    top: 120px;
-    @include aside(200px, min-content, none, white, $color-primary);
-    .nutshell, .h3-search {
-        margin-bottom: 20px;
-    }
-    .read-more, .h3-filters {
-        @include read-more;
-        &::after {
-            @include fading-line(100px, 0px, 1px, 50%, linear-gradient(to right, $color-primary, rgba(255, 255, 255, 0)));
+    top: 20px;
+    @include aside(200px, min-content, white, $color-primary);
+    .h2 {
+        position: relative;
+        max-width: 50px;
+        padding-bottom: 10px;
+        &::before {
+            @include fading-line(0, 0, 1px, 200px, $color-quaternary);
+            transition: 250ms ease-in-out;
+        }
+        &-closed::before {
+            @include fading-line(0, 0, 1px, 50px, $color-quaternary);
+            transition: 250ms ease-in-out 280ms;
         }
     }
-    .anchor-link {
-        @include anchor-link;
+    .article-nav {
+        min-width: 200px;
+        transition: 300ms ease-in-out 230ms;
+        transform-origin: top center;
+        transform: scaleY(1);
+        opacity: 1;
+        .nutshell, .h3-search {
+            margin: 20px 0;
+        }
+        .read-more, .h3-filters {
+            position: relative;
+            margin-bottom: 15px;
+            padding: 30px 0 6px 0;
+            &::after {
+                @include fading-line(0px, 0px, 1px, 50%, linear-gradient(to right, $color-primary, rgba(255, 255, 255, 0)));
+            }
+        }
+        .anchor-link {
+            padding: 6px 0;
+            transition: 50ms;
+            &:hover, &:focus {
+                font-size: 1.05rem;
+                margin-left: -2px;
+            }
+        }
+        &-closed {
+            transition: 300ms ease-in-out;
+            transform: scaleY(0);
+            opacity: 0;
+        }
     }
-    .btn-aside-close {
-        position: absolute;
-        top: 5px; right: -40px;
-    }
-    &-closed {
-        display: none;
-        //animation: appear-vertical 350ms ease-in-out 50ms reverse both;
-    }
-}
-
-.farm .article-nav {
-    margin-top: -20px;
-}
-
-.moringa .article-nav {
-    margin-top: 20px;
 }

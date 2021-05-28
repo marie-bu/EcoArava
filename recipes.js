@@ -44,7 +44,7 @@ function HTMLlightbox(object, i) {
 </div>`
 }
 
-// Tag and filter
+// Tag and filter display
 
 tags.forEach(tag => tag.addEventListener("click", function(e) {
     let clickedTag = e.target;
@@ -60,6 +60,8 @@ tags.forEach(tag => tag.addEventListener("click", function(e) {
     clickedTag.setAttribute("aria-pressed", x);
 }));
 
+// Append data recipes
+
 function appendDataGrid(data) {
     for (let i=1; i<data.recipes.length; i++) {
         HTMLgrid(data.recipes, i);
@@ -67,20 +69,22 @@ function appendDataGrid(data) {
 };
 
 function appendDataLightbox(data) {
-    for (let i=1; i<data.recipes.length; i++) {
-        HTMLlightbox(data.recipes, i);
+    for (let i=0; i<data.recipes.length; i++) {
+      HTMLlightbox(data.recipes, i);
 
-        const ingredients = document.querySelectorAll(".item-ingredients");
+      const ingredients = document.querySelectorAll(".content-left-ingredients");
+        
+      Array.from(data.recipes[i].ingredients).forEach((ingredient)=>{
+        ingredients[i].innerHTML +=
+        `<li>
+          <span class="item-ingredient">`+ingredient.ingredient+` :</span>
+          <span class="item-quantity"> `+ingredient.quantity+`</span>
+        </li>`;
+    });
+  }
+}
 
-    Array.from(data.recipes[i].ingredients).forEach((ingredient)=>{
-      ingredients[i].innerHTML +=
-          `<span class="item-ingredient">`+ingredient.ingredient+`:</span>
-          <span class="item-quantity"> `+ingredient.quantity+`</span></br>`
-  })
-    }
-};
-
-// Lightbox : open, close, show clicked recipe, navigate recipes with keyboard
+// Lightbox : open, close, show clicked recipe
 
 function openLightbox() {
   recipesLightbox.style.display = "block";
@@ -104,7 +108,7 @@ function closeLightbox(){
   }*/
   
   function showSlide(n){
-    const mediasArray = document.querySelectorAll(".recipes-display-details-item");
+    const mediasArray = document.querySelectorAll(".recipes-details-item");
 
     for (i=0; i<mediasArray.length; i++) {
       mediasArray[i].style.display = "none";

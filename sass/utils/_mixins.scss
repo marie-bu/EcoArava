@@ -12,12 +12,12 @@
     }
 }
 
-@mixin button-slide-text($fontSize, $color, $marginR, $marginB, $colorHover, $border) {
+@mixin button-slide-text($fontSize, $color, $marginR, $marginT, $colorHover, $border) {
     border: none;
     background: none;
     font-size: $fontSize;
     color: $color;
-    margin: 0 $marginR $marginB 0;
+    margin: $marginT $marginR 0 0;
     &:hover em, &:focus em {
         color: $colorHover;
         border: $border;
@@ -27,10 +27,10 @@
 @mixin button-icon-circle {
     border: 1px $color-quaternary solid;
     border-radius: 50%;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
     text-align: center;
-    line-height: 1.7rem;
+    line-height: 1.4rem;
     color: $color-primary;
     margin-left: 10px;
 }
@@ -62,29 +62,8 @@
     object-fit: cover;
 }
 
-@mixin box($width, $height) {
-    width: $width;
-    height: $height;
-    border-radius: 15px;
-    box-shadow: 2px 3px 6px $light-grey;
-    &:hover, &:focus {
-        box-shadow: inset 2px 2px 5px $light-grey;
-    }
-}
-
-@mixin box-bg-image($url, $top) {
-    position: relative;
-    background-image: $url;
-    background-size: cover;
-    cursor: pointer;
-    p {
-        position: absolute;
-        left: 0; top: $top;
-    }
-}
-
 @mixin fading-border($height) {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     top: -2px; left: -2px;
@@ -94,40 +73,22 @@
     background-image: linear-gradient(to right, lighten($color-quaternary, 15%) 5%, rgba(255, 255, 255, 0.1));
 }
 
-@mixin fading-line($right, $bottom, $height, $width, $bg) {
+@mixin fading-line($left, $bottom, $height, $width, $bg) {
     content: "";
     position: absolute;
-    right: $right; bottom: $bottom;
+    left: $left; bottom: $bottom;
     height: $height;
     width: $width;
     background: $bg;
 }
 
-@mixin read-more {
-    position: relative;
-    margin-bottom: 15px;
-    padding: 30px 0 6px 0;
-}
-
-@mixin anchor-link {
-    padding: 6px 0;
-    transition: 50ms;
-    &:hover, &:focus {
-        font-size: 1.05rem;
-        margin-left: -2px;
-    }
-}
-
-@mixin aside($width, $height, $border, $bg-color, $color) {
+@mixin aside($width, $height, $bg-color, $color) {
     width: $width;
     height: $height;
     border-radius: 5px;
-    border: $border;
     background-color: $bg-color;
-    transform-origin: top center;
-    animation: appear-vertical 350ms ease-in-out 50ms both;
     color: $color;
-    .h2 {
+    h2 {
         padding-bottom: 25px;
     }
     a {

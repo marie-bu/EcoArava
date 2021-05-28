@@ -3,7 +3,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    //padding: 40px 40px 20px 0;
+    max-width: 80%;
+    margin: 0 auto;
     &-item {
         position: relative;
         width: 205px;
@@ -43,7 +44,6 @@
         text-align: center;
         background-color: rgba($color: $color-quaternary, $alpha: 0.9);
         transition: 150ms ease-in;
-        transform-origin: left center;
         opacity: 0;
         transform: scale(0%);
         em {

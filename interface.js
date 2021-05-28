@@ -7,16 +7,13 @@ const menuBtn = document.querySelector(".nav-btn");
 const line2 = document.querySelector(".line2");
 const line3 = document.querySelector(".line3");
 
-// articles
+// article + aside
+
 const article = document.querySelector(".article");
-const aside = document.querySelector("aside");
+const articleTitle = document.querySelector(".h2");
+const asideNav = document.querySelector(".article-nav");
 const asideBtn = document.querySelector(".btn-aside");
 const paragraphBtns = document.querySelectorAll(".btn-show-text");
-const how = document.querySelector("#how");
-const howMuch = document.querySelector("#how-much");
-const when = document.querySelector("#when");
-const restrictions = document.querySelector("#restrictions");
-
 
 // Open-close navigation menu
 
@@ -46,24 +43,22 @@ menuBtn.addEventListener("click", ()=> {
     menuBtn.setAttribute("aria-expanded", x);
 });
 
-// Article : display/hide paragraphs
-
-function displayText(element) {
-    element.classList.toggle("hidden-p");
-}
-
-paragraphBtns.forEach(btn => {
-    btn.addEventListener("click", ()=>{
-        btn.classList.toggle("btn-show-text-clicked");
-        document.activeElement.blur();
-    });
-});
-
 // Aside : display/hide navigation
 
 asideBtn.addEventListener("click", ()=>{
     asideBtn.classList.toggle("btn-aside-clicked");
-    aside.classList.toggle("article-nav-closed");
+    asideNav.classList.toggle("article-nav-closed");
+    articleTitle.classList.toggle("h2-closed");
     article.classList.toggle("article-narrow");
     document.activeElement.blur();
+});
+
+// Article : display/hide paragraphs
+
+paragraphBtns.forEach(btn => {
+    btn.addEventListener("click", ()=>{
+        btn.nextElementSibling.classList.toggle("hidden-p");
+        btn.classList.toggle("btn-show-text-clicked");
+        document.activeElement.blur();
+    });
 });

@@ -1,33 +1,18 @@
 footer {
-    position: relative;
     display: grid;
     grid-template-columns: 1.3fr 1fr 0.5fr;
-    gap : 0 60px;
     grid-template-rows: 1fr 1fr;
-    padding: 30px 40px;
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0px; left: 0;
-        width: 70%;
-        height: 1px;
-        background: linear-gradient(to right, $color-primary, white);
-    }
-    //background-color:#cbf990;
-    //background-image: url(wave3.svg);
-    //background-size: cover;
-    //background-repeat: no-repeat;
-    //background-position: 0 15%;
+    gap : 0 60px;
+    padding: 20px 40px;
+    border-top: 1px lighten($color: $color-quaternary, $amount: 20%) solid;
+    background-color: rgba(129,184,56,0.4);
     .fNav {
-        h3 {
+        h3, p {
             padding-bottom: 5px;
         }
         &-about {
             max-width: 460px;
             grid-row : span 2;
-            p {
-                padding-bottom: 5px;
-            }
         }
         &-help {
             max-width: 375px;

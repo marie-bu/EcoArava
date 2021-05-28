@@ -1,13 +1,13 @@
 .btn {
     &-footer {
         @include button($color-primary, 0.7rem, 400, 12px);
-        background-color: lighten($color: $color-quaternary, $amount: 35%);
+        background-color: lighten($color: $color-quaternary, $amount: 50%);
         a {
             color:$color-primary;
         }
     }
     &-send {
-        @include button($color-quaternary, 1.1rem, 500, 35px);
+        @include button($color-quaternary, 1rem, 500, 35px);
     }
     &-close {
         @include button($color-primary, 1rem, 400, 10px);
@@ -17,7 +17,8 @@
     }
     &-aside {
         @include button-slide-text(1.2rem, $color-primary, 0, auto, $color-quaternary, none);
-        margin-top: 0;
+        width: 50px;
+        margin-top: 5px;
         em {
             &[class$="up"] {
                 display: none;
@@ -28,7 +29,9 @@
         }
     }
     &-show-text {
-        @include button-slide-text(inherit, $color-primary, 20px, 10px, $color-quaternary, 1px $color-primary solid);
+        @include button-slide-text(0.9rem, $color-primary, 20px, 20px, $color-quaternary, 1px $color-primary solid);
+        margin-left: 25px;
+        cursor: pointer;
         em {
             @include button-icon-circle;
             &[class$="up"] {

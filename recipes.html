@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/4ff3d07870.js" crossorigin="anonymous"></script>
     <script src="interface.js" defer></script>
     <script src="recipes.js" defer></script>
-    <title>Eco Arava</title>
+    <title>Eco Arava - Recipes with moringa</title>
 </head>
 <body>
 
@@ -25,7 +25,7 @@
                 <li><a href="farm.html" class="nav-menu-link">The farm</a></li>
                 <li><a href="moringa.html" class="nav-menu-link">Moringa</a></li>
                 <li><a href="recipes.html" class="nav-menu-link">Recipes</a></li>
-                <li><a href="https://ecoarava.ecwid.com/" target="_blank" class="nav-menu-link">Shop</a></li>
+                <li><a href="https://ecoarava.ecwid.com/" class="nav-menu-link">Shop</a></li>
                 <li><a href="contact.html" class="nav-menu-link">Contact</a></li>
             </ul>
             <button class="nav-btn" aria-expanded="false">
@@ -37,10 +37,29 @@
     </header>
 
     <main class="recipes">
-        <h2 class="h2-article">Recipes with moringa</h2>
-        <button class="btn btn-aside"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-        <p class="h3 recipes-instructions">Hover over the recipes and click to display the details</p>
-        <section class="article article-narrow">
+        <aside>
+            <p class="h2 h2-closed">Recipes with moringa</p>
+            <button class="btn btn-aside"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
+            <div class="article-nav article-nav-closed">
+                <p class="h3 h3-search">Search recipes</p>
+                <label class="label label-short">
+                    <input type="search" placeholder="Ingredient">
+                    <i class="fas fa-search" id="search-icon"></i>
+                </label>
+                <div class="article-nav-filters">
+                    <p class="h3 h3-filters">Filters</p>
+                    <button class="tag" aria-pressed="false">Breakfast</button>
+                    <button class="tag" aria-pressed="false">Dip</button>
+                    <button class="tag" aria-pressed="false">Drink</button>
+                    <button class="tag" aria-pressed="false">Entry</button>
+                    <button class="tag" aria-pressed="false">Seasoning</button>
+                    <button class="tag" aria-pressed="false">Snack</button>
+                    <button class="tag" aria-pressed="false">Spread</button>
+                </div>
+            </div>
+        </aside>
+        <section class="article">
+            <p class="h3 recipes-instructions">Hover over the recipes and click to display the details</p>
             <div class="recipes-grid">
                 <div class="recipes-grid-text no-result"><p>Sorry, we don't have any recipe matching your criteria</p></div>
             </div>
@@ -48,24 +67,6 @@
                 <button class="btn btn-close" onclick="closeLightbox()"><em tabindex="-1" class="fas fa-times"></em></button>
             </div>
         </section>
-        <aside class="recipes-list">
-            <h4 class="h3 h3-search">Search recipes</h4>
-            <button class="btn btn-aside btn-aside-close"><em class="fas fa-angle-up"></em></button>
-            <label class="label label-short">
-                <input type="search" placeholder="Ingredient">
-                <i class="fas fa-search" id="search-icon"></i>
-            </label>
-            <div class="recipes-list-filters">
-                <p class="h3 h3-filters">Filters</p>
-                <button class="tag" aria-pressed="false">Breakfast</button>
-                <button class="tag" aria-pressed="false">Dip</button>
-                <button class="tag" aria-pressed="false">Drink</button>
-                <button class="tag" aria-pressed="false">Entry</button>
-                <button class="tag" aria-pressed="false">Seasoning</button>
-                <button class="tag" aria-pressed="false">Snack</button>
-                <button class="tag" aria-pressed="false">Spread</button>
-            </div>
-        </aside>
     </main>
 
     <footer>

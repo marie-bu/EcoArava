@@ -1,45 +1,37 @@
 .article {
     position: relative;
     color: $color-primary;
-    margin: 0 auto;
-    transform-origin: bottom center;
-    animation: appear-vertical 250ms ease-out 150ms both;
-    /*h2 {
-        position: sticky;
-        top: 0; left: 0;
-        max-width: 50px;
-        height: 150px;
-        padding-top: 20px;
-    }*/
-    .btn-aside-open {
-        display: none;
-        position: absolute;
-        top: 18px; left: 100px;
-    }
+    margin: 0 auto 0 -110px;
+    transition: 250ms ease-in-out 280ms;
     &-part {
         display: flex;
         gap: 25px;
-        max-width: 85%;
-        margin: 0 90px 100px auto;
+        max-width: 80%;
+        margin: 0 auto 80px auto;
+        scroll-margin-top: 20px;
         &:last-child {
             margin-bottom: 20px;
         }
     }
-    &-pic {
+    img {
         flex: 1;
-        img {
-            width: 100%;
-            height: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+        width: 100%;
+        min-height: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    #context img {
+        height: 100%;
     }
     &-text {
-        flex: 3;
+        flex: 3; 
+    }
+    h2 {
+        margin-bottom: 15px;
     }
     h3 {
-        margin-bottom: 15px;
+        margin: 20px 0 0 20px;
     }
     p {
         line-height: 1.4rem;
@@ -51,18 +43,14 @@
             }
         }
     }
-    &-btns {
-        margin: 15px 0;
-    }
     .hidden-p {
         display: none;
     }
     .optional-p {
-        position: relative;
-        width: 80%;
-        margin: 15px auto 30px auto;
+        margin: 10px auto 35px 25px;
     }
     &-narrow {
-        margin-left: 70px;
+        margin-left: 0;
+        transition: 250ms ease-in-out;
     }
 }

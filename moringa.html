@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/4ff3d07870.js" crossorigin="anonymous"></script>
     <script src="interface.js" defer></script>
-    <title>Eco Arava</title>
+    <title>Eco Arava - Moringa oleifera leaf powder</title>
 </head>
 <body>
 
@@ -24,7 +24,7 @@
                 <li><a href="farm.html" class="nav-menu-link">The farm</a></li>
                 <li><a href="moringa.html" class="nav-menu-link">Moringa</a></li>
                 <li><a href="recipes.html" class="nav-menu-link">Recipes</a></li>
-                <li><a href="https://ecoarava.ecwid.com/" target="_blank" class="nav-menu-link">Shop</a></li>
+                <li><a href="https://ecoarava.ecwid.com/" class="nav-menu-link">Shop</a></li>
                 <li><a href="contact.html" class="nav-menu-link">Contact</a></li>
             </ul>
             <button class="nav-btn" aria-expanded="false">
@@ -36,15 +36,25 @@
     </header>
 
     <main class="moringa">
-        <h2 class="h2-article">Moringa oleifera leaf powder</h2>
-        <button class="btn btn-aside btn-aside-open"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
+        <aside>
+            <p class="h2 h2-closed">Moringa oleifera leaf powder</p>
+            <button class="btn btn-aside"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
+            <div class="article-nav article-nav-closed">
+                <p class="h3 nutshell">In a nutshell</p>
+                <p>An amazing tree full of virtues !<br>
+                    Here we will focus on its leaf powder, a natural food supplement full of nutrients and beneficial effects on health.<br>
+                <p class="h3 read-more">Read more :</p>
+                <p class="anchor-link"><a href="#context">A bit of context</a></p>
+                <p class="anchor-link"><a href="#nutrients">Nutrients</a></p>
+                <p class="anchor-link"><a href="#health">Health benefits</a></p>
+                <p class="anchor-link"><a href="#use">How to use it ?</a></p>
+            </div>
+        </aside>
         <article class="article">
             <div class="article-part" id="context">
-                <div class="article-pic article-pic-context">
-                    <img src="pictures/powder.png" alt="">
-                </div>
+                <img src="pictures/powder.jpg" alt="moringa oleifera powder in a jar">
                 <div class="article-text">
-                    <h3>A bit of context</h3>
+                    <h2 class="h3">A bit of context</h2>
                     <p>For centuries, moringa oleifera has been well known in many southern countries as a nutritious food and as a medicinal plant. Its leaf powder is also well-spread in some of these countries, such as Thailand, where it is sold in drug stores as a natural medicine and food supplement. It has also been used by some NGOs in Africa within programs against malnutrition.</p>
                     <p>In the West, moringa leaf powder is used as a food supplement. Indeed, with its various essentials nutrients and its detoxifying and antioxidant effect, moringa powder is an interesting addition to any diet.</p>
                     <p>Scientific experiments on this plant are lead throughout the world in researches against different health issues, such as diabetes or cardiovascular diseases, for example.</p>
@@ -52,99 +62,88 @@
             </div>
             <div class="article-part" id="nutrients">
                 <div class="article-text">
-                    <h3>Nutrients</h3>
+                    <h2 class="h3">Nutrients</h2>
                     <p>We can find so many pieces of information about the nutritive values of moringa oleifera leaf powder on the web, that it is easy to lose track ! The range can go from a few vitamins to impressively long lists of nutrients (so much that we wonder if some really exist…!)</p>
                     <p>Actually, it is true that nutrients and their quantity will vary between two powders ; because of the soil, the climate, the quality of drying and of the packaging, etc…</p>
                     <p>Be careful as well with assertions such as “contains 7 times more vitamin C than oranges”, etc… They do not justify their data, vary from an article to another, and are not consistent with proportions. They usually compare 100g of moringa powder with 100g of some food : If it is not uncommon to eat 100g of oranges with one serving, it is something else to consume 100g of moringa powder at once !</p>
                     <p>Moreover, moringa oleifera leaf powder should not and can not be the basis of a balanced, healthy diet ; varied and fresh products should. Still, it is a natural and beneficial way to add nutritional value to any diet very easily, and thus to complete and improve it. It has the upside to insure the intake of many different nutrients essential to your health in good quantities through only one food.</p>
+                    <h3>More details on the nutrients contained in moringa leaf powder :</h3>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Vitamins<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa oleifera leaf powder contains <em class="bold">vitamins A, B2, B3, and C</em>. It sometimes contains as well <em class="bold">vitamins B1 and E</em> (probably according to the quality of the powder).</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Minerals<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa oleifera leaf powder contains <em class="bold">calcium, magnesium, phosphorus, potassium, copper, iron and sulphur</em>. It sometimes contains as well <em class="bold">manganese, selenium and zinc</em> (probably according to the quality of the powder).</p>
+                    
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Amino acids and proteins<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa oleifera leaf powder contains <em class="bold">all the essential amino acids in important quantities</em>, which makes it <em class="bold">a very good source of vegetable protein</em>.<br><br>
+                    Amino acids are molecules that play an essential role in the formation of proteins in the body. There are essential amino acids (the body can not synthesise them, they have to be provided through food), semi-essential (necessary only for new born babies) and non essential (synthesised by the body from other amino acids, vitamins and carbohydrates). Moreover, each amino acid plays a particular role and therefore has its own importance.<br><br>    
+                    Amino acids are present both in vegetable and animal proteins ; however, the richest food in amino acids is from animal origin. Some plants are rich in amino acids as well but usually not of all the essential ones ; that is why it is important to match them with a complementary plant, in order to have enough of every amino acids (we can think of traditional culinary combinations that have this purpose, such as rice-lentils in India, corn-beans in the Andes, etc…).</p>
+                    
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Omega 3 and omega 6<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa oleifera leaves are rich in α-linolenic acid, or omega 3 ALA (omega 3 from vegetable source). They also contain in lesser quantity some linoleic acid, or a type of omega 6.<br><br>
+                    Omega 3 and 6 are fatty acids which are essentials to the good functioning and health of the human body ; however, their dosage have to be balanced, otherwise the opposite effect happens and the risks of obesity and cardiovascular diseases increase. The ideal ratio is five omega 6 for one omega 3, but in our societies, the ratio varies from ten to thirty omega 6 for one omega 3!<br><br>
+                    In moringa oleifera leaves, there is <em class="bold">far more omega 3 than omega 6</em> ; therefore it is a good way to <em class="bold">favourably balance the ratio between omega 3 and 6</em>.</p>
+                    
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Antioxidants<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa oleifera leaves are part of these plants which are <em class="bold">particularly rich in many natural antioxidants</em> ; they contain vitamins A, C and E, zinc, selenium, manganese, copper, sulphur, magnesium and many phytochemical compounds.<br><br>
+                    Antioxidants inhibit destructive effects of free radicals and therefore give protection against infections and degenerative diseases. They are often described as anti-aging and anti-cancer agents, but several researches on their effects on health have different results when synthetic food complement are involved. However, results all agree on the fact that daily intakes of natural antioxidants through fruits, vegetables and plants are highly beneficial to health.</p>
                 </div>
             </div>
             <div class="article-part" id="health">
                 <div class="article-text">
-                    <h3>Health benefits</h3>
+                    <h2 class="h3">Health benefits</h2>
                     <p>Taking moringa oleifera leaf powder on a regular basis gives to the body a great deal of essential nutrients and of antioxidants, while helping the body to eliminate toxins, thanks to its detoxifying and diuretic effect. In this way, it contributes to the general health of the body ; good functioning of organs, good digestion, improved blood circulation, strengthening of the immune system… It helps increase the energy without caffeine, quick-burning sugars nor nervous system stimulation. In short, including moringa oleifera to your daily diet can help you to positively influence you health, energy and well-being!</p>
-                    <p>More on moringa and...</p>
-                    <div class="article-btns">
-                        <button class="btn btn-show-text" onclick="displayText(diet)">healthy diet<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(sugar)">sugar & diabetes<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(fat)">fat & cardiovascular system<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(stress)">stress & nervous system<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(cancer)">cancer<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(others)">others<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                    </div>
-                    <div class="hidden-p optional-p" id="diet">
-                        <h4>Moringa and healthy diet</h4>
-                        <p>Moringa powder can help those who can’t always have a balanced diet, due to a lack of time or any other reasons, and whose body can be lacking of some nutrients. It is an easy way to add nutritional value to a dish or a drink, and thus to complete and improve one’s daily diet. It is a vegetable source of proteins as well that can benefit vegetarians or vegans. It can also help breast-feeding mothers to increase their milk production.</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="sugar">
-                        <h4>Moringa, sugar and diabetes</h4>
-                        <p>Moringa oleifera leaves positively affect sugar levels in the body. It has been proved that eating them lowers the blood sugar level within three hours. It is an easy and natural way to act against today’s diet, often too rich in sugar, and to prevent the possible health issues that can come from it. Of course, even if taking moringa oleifera leaf powder does help to balance and maintain a low blood sugar level, it does not help against very large amounts of sugar ; a teaspoon of moringa does not “cancel” a bunch of candies!</p>
-                        <p>Moringa oleifera leaves are used in some folk medicines to treat diabetes and related health issues. Several scientific researches were made on rats with type 2 diabetes with very good results. Eating moringa oleifera leaf powder does not, in any case, stand in for a medical treatment, however it can be a healthy and natural “plus” for people affected by diabetes.</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="fat">
-                        <h4>Moringa, fatty acids and cardiovascular system</h4>
-                        <p>Several researches have shown the beneficial effects of moringa oleifera leaves on the cardiovascular system : lowering and stabilisation of high blood pressure, lowering of cholesterol, lowering of lipid level in the blood, loss of body and heart’s weight, heart and blood system stimulation, anti atherosclerosis effect (acting against the clogging of arteries). It is used in phytotherapy in India to lower obese patients’ cholesterol level.</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="stress">
-                        <h4>Moringa, stress and nervous system</h4>
-                        <p>Testimonies describe beneficial effects of a regular intake of moringa oleifera leaf powder for people suffering of stress and/or lack of sleep, by helping to appease the nervous system and deepening sleep. Those effects have been scientifically studied and proved using moringa oleifera root extracts, but not leaves.</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="cancer">
-                        <h4>Moringa and cancer</h4>
-                        <p>Experiments indicate that moringa oleifera leaf powder can be a beneficial factor within the prevention of cancer, a beneficial addition within a medical cancer treatment, and a help in putting up with chemotherapy. Some of its constituents, such as niazimicin, have been proved to have anti-cancer properties and are still under study. Reminder : it does not, in any case, replace a doctor’s opinion nor a medical treatment.</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="others">
-                        <h4>Other benefical health effect of moringa</h4>
-                        <p>Testimonies tell us that moringa oleifera leaf powder can heal stomach ulcer. Scientific experiments showed that it can heal gastric lesions caused by acidity as well as preventing the development of gastric and duodenum ulcers.</p>
-                        <p>Studies on rats have shown that moringa oleifera leaves can have a positive action in regulating hyperthyroidism.</p>
-                        <p>Studies have proved that consuming moringa oleifera leaves can have protective effects on the liver.</p>
-                        <p>Various part of the tree, including the leaves, have been proved to have antibiotic and anti-fungus properties against some bacteria and fungus. They also have an anti-inflammatory effect.</p>
-                    </div>
+                    <h3>More on moringa and...</h3>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Healthy diet<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa powder can help those who can’t always have a balanced diet, due to a lack of time or any other reasons, and whose body can be lacking of some nutrients. It is an easy way to add nutritional value to a dish or a drink, and thus to complete and improve one’s daily diet. It is a vegetable source of proteins as well that can benefit vegetarians or vegans. It can also help breast-feeding mothers to increase their milk production.</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Sugar and diabetes<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Moringa oleifera leaves positively affect sugar levels in the body. It has been proved that eating them lowers the blood sugar level within three hours. It is an easy and natural way to act against today’s diet, often too rich in sugar, and to prevent the possible health issues that can come from it. Of course, even if taking moringa oleifera leaf powder does help to balance and maintain a low blood sugar level, it does not help against very large amounts of sugar ; a teaspoon of moringa does not “cancel” a bunch of candies!<br><br>
+                    Moringa oleifera leaves are used in some folk medicines to treat diabetes and related health issues. Several scientific researches were made on rats with type 2 diabetes with very good results. Eating moringa oleifera leaf powder does not, in any case, stand in for a medical treatment, however it can be a healthy and natural “plus” for people affected by diabetes.</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Fatty acids and cardiovascular system<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Several researches have shown the beneficial effects of moringa oleifera leaves on the cardiovascular system : lowering and stabilisation of high blood pressure, lowering of cholesterol, lowering of lipid level in the blood, loss of body and heart’s weight, heart and blood system stimulation, anti atherosclerosis effect (acting against the clogging of arteries). It is used in phytotherapy in India to lower obese patients’ cholesterol level.</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Stress and nervous system<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Testimonies describe beneficial effects of a regular intake of moringa oleifera leaf powder for people suffering of stress and/or lack of sleep, by helping to appease the nervous system and deepening sleep. Those effects have been scientifically studied and proved using moringa oleifera root extracts, but not leaves.</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Cancer<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Experiments indicate that moringa oleifera leaf powder can be a beneficial factor within the prevention of cancer, a beneficial addition within a medical cancer treatment, and a help in putting up with chemotherapy. Some of its constituents, such as niazimicin, have been proved to have anti-cancer properties and are still under study. Reminder : it does not, in any case, replace a doctor’s opinion nor a medical treatment.</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Other beneficial effects on health<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Testimonies tell us that moringa oleifera leaf powder can heal stomach ulcer. Scientific experiments showed that it can heal gastric lesions caused by acidity as well as preventing the development of gastric and duodenum ulcers.<br><br>
+                    Studies on rats have shown that moringa oleifera leaves can have a positive action in regulating hyperthyroidism.<br><br>
+                    Studies have proved that consuming moringa oleifera leaves can have protective effects on the liver.<br><br>
+                    Various part of the tree, including the leaves, have been proved to have antibiotic and anti-fungus properties against some bacteria and fungus. They also have an anti-inflammatory effect.</p>
+
                 </div>
             </div>
             <div class="article-part" id="use">
                 <div class="article-text">
-                    <h3>How to use it ?</h3>
+                    <h2 class="h3">How to use it ?</h2>
                     <p>It can be added to any meal or to any drinks, according to your taste! It has a bit of an grassy taste and will not be tasted in spicy dishes. You can also <a href="recipes.html" class="link-inside-text">check out our home-made recipes</a> with moringa leaf powder!</p>
-                    <div class="article-btns">
-                        <button class="btn btn-show-text" onclick="displayText(how)">How<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(howMuch)">How much<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(when)">When<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                        <button class="btn btn-show-text" onclick="displayText(restrictions)">Restrictions<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
-                    </div>
-                    <div class="hidden-p optional-p" id="how">
-                        <h4>How</h4>
-                        <p>It is best to take it with a meal, but it is important not to cook it, as it would diminish its nutritional value. Moringa oleifera leaf powder is a rich, nutritious food, but it is not a medicine : it is meant to be consumed a little bit of it regularly to maintain or increase general health, but not to be taken in big quantities on a short period of time as a medicine. However, it can help increasing energy and the body’s defences during an illness or a recovery (but again, particularly if taken regularly ; remember that it is not a medicine, in case of health problems, the first thing to do is to consult a doctor).</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="how-much">
-                        <h4>How much</h4>
-                        <p>During the first 3 to 5 days : It is advised to start with little intakes (1/2 or 1 teaspoon per day), in order to let the body get used to it.</p>
-                        <p>During the 2 following weeks : Gradually increase to 1, 2 or 3 teaspoons per day and regulate your intake according to your needs and to your body’s reactions.</p>
-                        <p>Later on : Some people take it every day, some every two or three days ; some people take 1 teaspoon per day, others 2 or 3. It is up to you to feel what suits you best ! Only regularity on the long run is the key !</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="when">
-                        <h4>When</h4>
-                        <p>When you want (morning, afternoon, night time…) and as many times as you want, but always with some food and without exceeding the recommended daily dose (3 teaspoons).</p>
-                    </div>
-                    <div class="hidden-p optional-p" id="restrictions">
-                        <h4>Restrictions</h4>
-                        <p>Do not take too much, too soon ! It can cause nausea, diarrhoea, flatulences, and hot flashes. It can have a laxative effect if one takes too much of it and/or on an empty stomach. It is not advised to take a lot of it outside meal time. To get the laxative effect, 2 teaspoons on an empty stomach should be enough.</p>
-                        <p>The powder slightly thickens the blood : if you are undergoing an anticoagulant treatment or if you are pregnant, consult your doctor before adding moringa oleifera powder to your diet.</p>
-                        <p>It contains oxalic acid ; contained in many types of food (especially rhubarb, sorrel, spinach, …), it fixes calcium but it can be toxic in very high quantities. For healthy people, it is naturally eliminated by urine, but it should be avoided by those who have oxalemia, oxalic urolithiasis, renal failure, kidney stones, tendency to have cystitis or gout.</p>
-                    </div>
+                        
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">How<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p" id="how">It is best to take it with a meal, but it is important not to cook it, as it would diminish its nutritional value. Moringa oleifera leaf powder is a rich, nutritious food, but it is not a medicine : it is meant to be consumed a little bit of it regularly to maintain or increase general health, but not to be taken in big quantities on a short period of time as a medicine. However, it can help increasing energy and the body’s defences during an illness or a recovery (but again, particularly if taken regularly ; remember that it is not a medicine, in case of health problems, the first thing to do is to consult a doctor).</p>
+                    
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">How much<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">During the first 3 to 5 days : It is advised to start with little intakes (1/2 or 1 teaspoon per day), in order to let the body get used to it.<br><br>
+                    During the 2 following weeks : Gradually increase to 1, 2 or 3 teaspoons per day and regulate your intake according to your needs and to your body’s reactions.<br><br>
+                    Later on : Some people take it every day, some every two or three days ; some people take 1 teaspoon per day, others 2 or 3. It is up to you to feel what suits you best ! Only regularity on the long run is the key !</p>
+                    
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">When<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">When you want (morning, afternoon, night time…) and as many times as you want, but always with some food and without exceeding the recommended daily dose (3 teaspoons).</p>
+
+                    <h3 class="btn btn-show-text" tabindex="0" role="button">Restrictions<em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></h3>
+                    <p class="hidden-p optional-p">Do not take too much, too soon ! It can cause nausea, diarrhoea, flatulences, and hot flashes. It can have a laxative effect if one takes too much of it and/or on an empty stomach. It is not advised to take a lot of it outside meal time. To get the laxative effect, 2 teaspoons on an empty stomach should be enough.<br><br>
+                    The powder slightly thickens the blood : if you are undergoing an anticoagulant treatment or if you are pregnant, consult your doctor before adding moringa oleifera powder to your diet.<br><br>
+                    It contains oxalic acid ; contained in many types of food (especially rhubarb, sorrel, spinach, …), it fixes calcium but it can be toxic in very high quantities. For healthy people, it is naturally eliminated by urine, but it should be avoided by those who have oxalemia, oxalic urolithiasis, renal failure, kidney stones, tendency to have cystitis or gout.</p>
+
                 </div>
             </div>
         </article>    
-        <aside class="article-nav">
-            <h4 class="h3 nutshell">In a nutshell</h4>
-            <p>An amazing tree full of virtues !<br>
-                Here we will focus on its leaf powder, a natural food supplement full of nutrients and beneficial effects on health.<br>
-            <p class="h3 read-more">Read more :</p>
-            <p class="anchor-link"><a href="#context">A bit of context</a></p>
-            <p class="anchor-link"><a href="#nutrients">Nutrients</a></p>
-            <p class="anchor-link"><a href="#health">Health benefits</a></p>
-            <p class="anchor-link"><a href="#use">How to use it ?</a></p>
-        </aside>
     </main>
 
     <footer>

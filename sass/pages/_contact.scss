@@ -1,10 +1,12 @@
 .contact {
     display: flex;
     &-info {
-        @include aside(250px, auto, none, lighten($color-quaternary, 9%), white);
+        @include aside(250px, auto, lighten($color-quaternary, 9%), white);
         margin-top: -60px;
         padding: 60px 20px 60px 20px;
         box-shadow: 1px 1px 6px $middle-grey;
+        transform-origin: top center;
+        animation: appear-vertical 350ms ease-in-out 100ms both;
         &-part {
             display: flex;
             padding: 30px 0;
@@ -16,9 +18,11 @@
     }
     form {
         width: 100%;
+        margin-left: 25px;
         transform-origin: center left;
-        animation: appear-horizontal 250ms ease-in-out 200ms both;
+        animation: appear-horizontal 300ms ease-in-out 350ms both;
         h2 {
+            color: $color-quaternary;
             padding-bottom: 25px;
         }
     }

@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&family=Varela+Round&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&family=Lora:wght@600&family=Montserrat:wght@600&family=Prompt:wght@500&family=Rubik:wght@500&family=Teko:wght@500&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap');
-
+html {
+    font-family: "Mukta", sans-serif;
+    font-size: 100%;
+}
 
 p {
     font-size: 1.0rem;
@@ -21,10 +19,17 @@ h2, .h2 {
     text-transform: uppercase;
 }
 
-h3, .h3 {
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.h3 {
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 600;
+    text-transform: none;
 }
 
 .item-title {
@@ -43,6 +48,7 @@ figcaption {
 
 .bold {
     font-weight: 600;
+    font-style: normal;
 }
 
 .anchor-link {
@@ -91,10 +97,6 @@ header {
 
 footer {
     color: $color-primary;
-    h3 {
-        font-size: 0.9rem;
-        font-weight: 600;
-    }
     li, p {
         font-size: 0.8rem;
         font-weight: 500;
@@ -106,15 +108,6 @@ footer {
     }
 }
 
-.landing {
-    a {
-        font-size: 0.9rem;
-        color: $color-primary;
-        font-weight: 400;
-        line-height: 1rem;
-    }
-}
-
 input, textarea {
     font-family: "Mukta", sans-serif;
     font-size: 1rem;
@@ -123,8 +116,4 @@ input, textarea {
     &::placeholder {
         color: rgba($color: $color-primary, $alpha: 0.8);
     }
-}
-
-form h2 {
-    color: $color-quaternary;
 }

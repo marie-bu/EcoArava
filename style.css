@@ -1,21 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Mukta:wght@200;300;400;500;600;700&family=Varela+Round&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@600&family=Lora:wght@600&family=Montserrat:wght@600&family=Prompt:wght@500&family=Rubik:wght@500&family=Teko:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap");
-@keyframes appear-vertical {
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700&family=Lora:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500;600&display=swap");
+@keyframes appear-opacity {
   0% {
-    transform: scaleY(0%);
+    opacity: 0;
   }
   100% {
-    transform: scaleY(100%);
+    opacity: 1;
+  }
+}
+@keyframes appear-vertical {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
   }
 }
 @keyframes appear-horizontal {
   0% {
+    opacity: 0;
     transform: scaleX(0);
   }
   100% {
-    transform: scaleX(100%);
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 *, *::after, *::before {
@@ -27,8 +36,7 @@
 html {
   max-width: 1440px;
   margin: auto;
-  font-size: 100%;
-  font-family: "Mukta", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -42,6 +50,11 @@ a {
 
 button {
   cursor: pointer;
+}
+
+html {
+  font-family: "Mukta", sans-serif;
+  font-size: 100%;
 }
 
 p {
@@ -58,10 +71,17 @@ h2, .h2 {
   text-transform: uppercase;
 }
 
-h3, .h3 {
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 600;
+  text-transform: none;
 }
 
 .item-title {
@@ -80,6 +100,7 @@ figcaption {
 
 .bold {
   font-weight: 600;
+  font-style: normal;
 }
 
 .anchor-link {
@@ -125,10 +146,6 @@ header .nav-menu-link {
 footer {
   color: #327319;
 }
-footer h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
 footer li, footer p {
   font-size: 0.8rem;
   font-weight: 500;
@@ -137,13 +154,6 @@ footer li, footer p {
 }
 footer a {
   color: #327319;
-}
-
-.landing a {
-  font-size: 0.9rem;
-  color: #327319;
-  font-weight: 400;
-  line-height: 1rem;
 }
 
 input, textarea {
@@ -156,10 +166,6 @@ input::placeholder, textarea::placeholder {
   color: rgba(50, 115, 25, 0.8);
 }
 
-form h2 {
-  color: #81b838;
-}
-
 .btn-footer {
   border: none;
   background: none;
@@ -169,7 +175,7 @@ form h2 {
   font-weight: 400;
   padding: 6px 12px;
   margin: 10px 10px 0 0;
-  background-color: #d5eab9;
+  background-color: #f8fcf4;
 }
 .btn-footer:hover, .btn-footer:focus {
   box-shadow: inset 1px 1px 1px #327319;
@@ -182,7 +188,7 @@ form h2 {
   background: none;
   border-radius: 15px;
   box-shadow: 1px 1px 1px #81b838;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 6px 35px;
   margin: 10px 10px 0 0;
@@ -211,8 +217,9 @@ form h2 {
   background: none;
   font-size: 1.2rem;
   color: #327319;
-  margin: 0 0 auto 0;
-  margin-top: 0;
+  margin: auto 0 0 0;
+  width: 50px;
+  margin-top: 5px;
 }
 .btn-aside:hover em, .btn-aside:focus em {
   color: #81b838;
@@ -238,9 +245,11 @@ form h2 {
 .btn-show-text {
   border: none;
   background: none;
-  font-size: inherit;
+  font-size: 0.9rem;
   color: #327319;
-  margin: 0 20px 10px 0;
+  margin: 20px 20px 0 0;
+  margin-left: 25px;
+  cursor: pointer;
 }
 .btn-show-text:hover em, .btn-show-text:focus em {
   color: #81b838;
@@ -249,10 +258,10 @@ form h2 {
 .btn-show-text em {
   border: 1px #81b838 solid;
   border-radius: 50%;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 1.5rem;
+  height: 1.5rem;
   text-align: center;
-  line-height: 1.7rem;
+  line-height: 1.4rem;
   color: #327319;
   margin-left: 10px;
 }
@@ -380,7 +389,7 @@ header .logo img {
 }
 header .logo h1 {
   margin-top: 70px;
-  margin-bottom: -5px;
+  margin-bottom: -2px;
 }
 header .logo h2 {
   margin-bottom: 6px;
@@ -442,31 +451,20 @@ header .nav #opened-menu {
 }
 
 footer {
-  position: relative;
   display: grid;
   grid-template-columns: 1.3fr 1fr 0.5fr;
-  gap: 0 60px;
   grid-template-rows: 1fr 1fr;
-  padding: 30px 40px;
+  gap: 0 60px;
+  padding: 20px 40px;
+  border-top: 1px #b1d87e solid;
+  background-color: rgba(129, 184, 56, 0.4);
 }
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 70%;
-  height: 1px;
-  background: linear-gradient(to right, #327319, white);
-}
-footer .fNav h3 {
+footer .fNav h3, footer .fNav p {
   padding-bottom: 5px;
 }
 footer .fNav-about {
   max-width: 460px;
   grid-row: span 2;
-}
-footer .fNav-about p {
-  padding-bottom: 5px;
 }
 footer .fNav-help {
   max-width: 375px;
@@ -487,143 +485,126 @@ footer ul {
   gap: 10px 20px;
 }
 
-/*main {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    gap: 0 50px;
-    padding: 55px;
-    .h2-article {
-        position: sticky;
-        max-width: 50px;
-        color: $color-primary;
-    }
-}*/
 main {
-  display: grid;
-  grid-template-columns: 50px 50px 1fr;
-  grid-template-rows: 100px 1fr;
-  gap: 0 50px;
+  display: flex;
+  gap: 25px;
   padding: 55px;
-}
-main .h2-article, main .btn-aside {
-  position: sticky;
-  top: 20px;
-  color: #327319;
-}
-main aside {
-  grid-column: span 2;
-  grid-row-start: 2;
-}
-main article {
-  grid-column-start: 3;
-  grid-row: span 2;
+  animation: appear-opacity 400ms ease-in-out 50ms both;
 }
 
-.article-nav, .recipes-list {
+aside {
   position: sticky;
-  top: 120px;
+  top: 20px;
   width: 200px;
   height: min-content;
   border-radius: 5px;
-  border: none;
   background-color: white;
-  transform-origin: top center;
-  animation: appear-vertical 350ms ease-in-out 50ms both;
   color: #327319;
 }
-.article-nav .h2, .recipes-list .h2 {
+aside h2 {
   padding-bottom: 25px;
 }
-.article-nav a, .recipes-list a {
+aside a {
   color: #327319;
 }
-.article-nav .nutshell, .article-nav .h3-search, .recipes-list .nutshell, .recipes-list .h3-search {
-  margin-bottom: 20px;
+aside .h2 {
+  position: relative;
+  max-width: 50px;
+  padding-bottom: 10px;
 }
-.article-nav .read-more, .article-nav .h3-filters, .recipes-list .read-more, .recipes-list .h3-filters {
+aside .h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 200px;
+  background: #81b838;
+  transition: 250ms ease-in-out;
+}
+aside .h2-closed::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 50px;
+  background: #81b838;
+  transition: 250ms ease-in-out 280ms;
+}
+aside .article-nav {
+  min-width: 200px;
+  transition: 300ms ease-in-out 230ms;
+  transform-origin: top center;
+  transform: scaleY(1);
+  opacity: 1;
+}
+aside .article-nav .nutshell, aside .article-nav .h3-search {
+  margin: 20px 0;
+}
+aside .article-nav .read-more, aside .article-nav .h3-filters {
   position: relative;
   margin-bottom: 15px;
   padding: 30px 0 6px 0;
 }
-.article-nav .read-more::after, .article-nav .h3-filters::after, .recipes-list .read-more::after, .recipes-list .h3-filters::after {
+aside .article-nav .read-more::after, aside .article-nav .h3-filters::after {
   content: "";
   position: absolute;
-  right: 100px;
+  left: 0px;
   bottom: 0px;
   height: 1px;
   width: 50%;
   background: linear-gradient(to right, #327319, rgba(255, 255, 255, 0));
 }
-.article-nav .anchor-link, .recipes-list .anchor-link {
+aside .article-nav .anchor-link {
   padding: 6px 0;
   transition: 50ms;
 }
-.article-nav .anchor-link:hover, .article-nav .anchor-link:focus, .recipes-list .anchor-link:hover, .recipes-list .anchor-link:focus {
+aside .article-nav .anchor-link:hover, aside .article-nav .anchor-link:focus {
   font-size: 1.05rem;
   margin-left: -2px;
 }
-.article-nav .btn-aside-close, .recipes-list .btn-aside-close {
-  position: absolute;
-  top: 5px;
-  right: -40px;
-}
-.article-nav-closed, .recipes-list-closed {
-  display: none;
-}
-
-.farm .article-nav {
-  margin-top: -20px;
-}
-
-.moringa .article-nav {
-  margin-top: 20px;
+aside .article-nav-closed {
+  transition: 300ms ease-in-out;
+  transform: scaleY(0);
+  opacity: 0;
 }
 
 .article {
   position: relative;
   color: #327319;
-  margin: 0 auto;
-  transform-origin: bottom center;
-  animation: appear-vertical 250ms ease-out 150ms both;
-  /*h2 {
-      position: sticky;
-      top: 0; left: 0;
-      max-width: 50px;
-      height: 150px;
-      padding-top: 20px;
-  }*/
-}
-.article .btn-aside-open {
-  display: none;
-  position: absolute;
-  top: 18px;
-  left: 100px;
+  margin: 0 auto 0 -110px;
+  transition: 250ms ease-in-out 280ms;
 }
 .article-part {
   display: flex;
   gap: 25px;
-  max-width: 85%;
-  margin: 0 90px 100px auto;
+  max-width: 80%;
+  margin: 0 auto 80px auto;
+  scroll-margin-top: 20px;
 }
 .article-part:last-child {
   margin-bottom: 20px;
 }
-.article-pic {
+.article img {
   flex: 1;
-}
-.article-pic img {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
 }
+.article #context img {
+  height: 100%;
+}
 .article-text {
   flex: 3;
 }
-.article h3 {
+.article h2 {
   margin-bottom: 15px;
+}
+.article h3 {
+  margin: 20px 0 0 20px;
 }
 .article p {
   line-height: 1.4rem;
@@ -635,19 +616,15 @@ main article {
 .article p .link-inside-text:hover, .article p .link-inside-text:focus {
   color: #419520;
 }
-.article-btns {
-  margin: 15px 0;
-}
 .article .hidden-p {
   display: none;
 }
 .article .optional-p {
-  position: relative;
-  width: 80%;
-  margin: 15px auto 30px auto;
+  margin: 10px auto 35px 25px;
 }
 .article-narrow {
-  margin-left: 70px;
+  margin-left: 0;
+  transition: 250ms ease-in-out;
 }
 
 .recipes-grid {
@@ -655,6 +632,8 @@ main article {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 .recipes-grid-item {
   position: relative;
@@ -694,7 +673,6 @@ main article {
   text-align: center;
   background-color: rgba(129, 184, 56, 0.9);
   transition: 150ms ease-in;
-  transform-origin: left center;
   opacity: 0;
   transform: scale(0%);
 }
@@ -703,7 +681,7 @@ main article {
   padding: 20px;
 }
 
-.recipes-display-details {
+.recipes-details {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -739,55 +717,53 @@ main article {
           margin-top: 
       }*/
 }
-.recipes-display-details-item {
-  display: none;
-  grid-template-columns: 200px, 100%;
+.recipes-details-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
   grid-template-rows: 60px 60px 100%;
   gap: 20px 40px;
 }
-.recipes-display-details-item img {
+.recipes-details-item img {
   width: 120px;
   height: 120px;
   background-color: transparent;
-  border-radius: 15px;
+  border-radius: 50%;
   box-shadow: 1px 1px 1px #909090, inset -1px -1px 6px #303030;
   object-fit: cover;
+  min-height: auto;
   grid-column: 1;
-  grid-row-start: span 2;
+  grid-row: span 2;
 }
-.recipes-display-details-item .item-title {
+.recipes-details-item .item-title {
   margin-top: 35px;
-  grid-column: 2;
-  grid-row: 1;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
-.recipes-display-details-item .item-level {
+.recipes-details-item .item-level {
   grid-column: 2;
   grid-row: 2;
 }
-.recipes-display-details .btn-close {
+.recipes-details-item .content-left-ingredients {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  line-height: 1.2rem;
+  max-height: 150px;
+}
+.recipes-details .btn-close {
   position: absolute;
   right: 10px;
   top: -10px;
 }
 
-/*.article-pic {
-    &-desert {
-        grid-template-columns: 2.5fr 1fr;
-    }
-    &-sustain {
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-    &-growingMoringa {
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-}*/
 .recipes .article {
   grid-column-start: 3;
   color: #327319;
 }
 .recipes-instructions {
   color: #327319;
-  margin-left: 70px;
+  margin-left: 100px;
+  padding-bottom: 30px;
 }
 .recipes .no-result {
   display: none;
@@ -804,16 +780,15 @@ main article {
   width: 250px;
   height: auto;
   border-radius: 5px;
-  border: none;
   background-color: #97cb53;
-  transform-origin: top center;
-  animation: appear-vertical 350ms ease-in-out 50ms both;
   color: white;
   margin-top: -60px;
   padding: 60px 20px 60px 20px;
   box-shadow: 1px 1px 6px #505050;
+  transform-origin: top center;
+  animation: appear-vertical 350ms ease-in-out 100ms both;
 }
-.contact-info .h2 {
+.contact-info h2 {
   padding-bottom: 25px;
 }
 .contact-info a {
@@ -829,10 +804,12 @@ main article {
 }
 .contact form {
   width: 100%;
+  margin-left: 25px;
   transform-origin: center left;
-  animation: appear-horizontal 250ms ease-in-out 200ms both;
+  animation: appear-horizontal 300ms ease-in-out 350ms both;
 }
 .contact form h2 {
+  color: #81b838;
   padding-bottom: 25px;
 }
 
