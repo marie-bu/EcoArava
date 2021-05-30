@@ -2,17 +2,29 @@
     border: none;
     background: none;
     border-radius: 15px;
-    box-shadow: 1px 1px 1px $shadowColor;
     font-size: $fontSize;
     font-weight: $fontWeight;
     padding: 6px $paddingHorizontal;
     margin: 10px 10px 0 0;
+    box-shadow: 1px 1px 1px $shadowColor;
     &:hover, &:focus {
         box-shadow: inset 1px 1px 1px $shadowColor;
     }
 }
 
-@mixin button-slide-text($fontSize, $color, $marginR, $marginT, $colorHover, $border) {
+@mixin button-circle($border, $rem, $color, $marginL) {
+    border: $border;
+    border-radius: 50%;
+    width: $rem;
+    height: $rem;
+    background: none;
+    text-align: center;
+    line-height: $rem;
+    color: $color;
+    margin-left: $marginL;
+}
+
+@mixin button-no-border($fontSize, $color, $marginR, $marginT, $colorHover, $border) {
     border: none;
     background: none;
     font-size: $fontSize;
@@ -24,18 +36,7 @@
     }
 }
 
-@mixin button-icon-circle {
-    border: 1px $color-quaternary solid;
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    text-align: center;
-    line-height: 1.4rem;
-    color: $color-primary;
-    margin-left: 10px;
-}
-
-@mixin button-toggle-icon($color, $border, $colorH, $borderH) {
+@mixin toggle-icon($color, $border, $colorH, $borderH) {
     em {
         color: $color;
         border: $border;
@@ -52,14 +53,13 @@
     }
 }
 
-@mixin img($width, $height, $radius) {
+@mixin img-container($width, $height, $bg, $radius) {
     width: $width;
     height: $height;
-    background-color: transparent;
+    background-color: $bg;
     border-radius: $radius;
     box-shadow: 1px 1px 1px $light-grey,
     inset -1px -1px 6px $dark-grey;
-    object-fit: cover;
 }
 
 @mixin fading-border($height) {

@@ -5,8 +5,9 @@ fetch('https://raw.githubusercontent.com/marie-bu/EcoArava/f5393f81915e625816d72
         return response.json();
     })
     .then(function(data) {
-        appendDataGrid(data);
-        appendDataLightbox(data);
+        createArray(data.recipes);
+        appendDataGrid(data.recipes);
+        appendDataLightbox(data.recipes);
     })
     .catch(function(error) {
         console.log(error);
@@ -18,13 +19,15 @@ const recipesGrid = document.querySelector(".recipes-grid");
 const recipesLightbox = document.querySelector(".recipes-details");
 const recipesInstructions = document.querySelector(".recipes-instructions");
 const closeLightboxBtn = document.querySelector(".btn-close");
+
 const tags = document.querySelectorAll(".tag");
+const filters = document.querySelector(".article-nav-filters");
 
 // HTML
 
 function HTMLgrid(object, i) {
     recipesGrid.innerHTML += `
-        <figure class="recipes-grid-item" onclick="openLightbox();showSlide(`+[i]+`)">
+        <figure class="recipes-grid-item" onclick="openLightbox();openRecipe(`+[i+1]+`)">
             <img src="recipes/`+object[i].image+`" alt="">
             <figcaption><em class="centered">`+object[i].name+`</em></figcaption>
         </figure>`
@@ -33,18 +36,27 @@ function HTMLgrid(object, i) {
 function HTMLlightbox(object, i) {
     recipesLightbox.innerHTML += `
     <div class="recipes-details-item">
-      <img src="recipes/`+object[i].image+`" alt="">
-      <div class="item-ingredients">
-        <p class="bold">Ingredients</p>
-        <ul class="content-left-ingredients"></ul>
-      </div>
-      <h3 class="item-title">`+object[i].name+`</h3>
-      <p class="item-level"><span class="bold">Level :</span> `+object[i].level+`</p>
-      <p class="item-directions"><span class="bold">Directions :</span> `+object[i].directions+`</p>
-</div>`
+        <img src="recipes/`+object[i].image+`" alt="">
+        <h2 class="item-title">`+object[i].name+`</h2>
+        <p class="item-level"><span class="bold">Level :</span> `+object[i].level+`</p>
+        <div class="item-ingredients">
+          <p class="bold">Ingredients :</p>
+          <ul class="item-ingredients-list"></ul>
+        </div>
+        <p class="item-directions"><span class="bold">Directions :</span> `+object[i].directions+`</p>
+    </div>`
 }
 
-// Tag and filter display
+function units(element) {
+  if (element.quantity == undefined){
+      element.quantity = ""
+  }
+  if (element.unit == undefined){
+    element.unit = ""
+  }
+}
+
+// Filter tags display
 
 tags.forEach(tag => tag.addEventListener("click", function(e) {
     let clickedTag = e.target;
@@ -63,22 +75,24 @@ tags.forEach(tag => tag.addEventListener("click", function(e) {
 // Append data recipes
 
 function appendDataGrid(data) {
-    for (let i=1; i<data.recipes.length; i++) {
-        HTMLgrid(data.recipes, i);
+    for (let i=0; i<data.length; i++) {
+        HTMLgrid(data, i);
     }
 };
 
 function appendDataLightbox(data) {
-    for (let i=0; i<data.recipes.length; i++) {
-      HTMLlightbox(data.recipes, i);
+    for (let i=0; i<data.length; i++) {
+      HTMLlightbox(data, i);
 
-      const ingredients = document.querySelectorAll(".content-left-ingredients");
+      const ingredients = document.querySelectorAll(".item-ingredients-list");
         
-      Array.from(data.recipes[i].ingredients).forEach((ingredient)=>{
+      Array.from(data[i].ingredients).forEach((ingredient)=>{
+        units(ingredient);
         ingredients[i].innerHTML +=
         `<li>
           <span class="item-ingredient">`+ingredient.ingredient+` :</span>
           <span class="item-quantity"> `+ingredient.quantity+`</span>
+          <span class="item-unit"> `+ingredient.unit+`</span>
         </li>`;
     });
   }
@@ -100,19 +114,79 @@ function closeLightbox(){
   recipesGrid.style.display = null;
   recipesInstructions.style = null;
 }
-
-  /*function openLbKeyboard(event, element){
-    if(event.key=="Enter"){
-      openLightbox(element)
-    }
-  }*/
   
-  function showSlide(n){
-    const mediasArray = document.querySelectorAll(".recipes-details-item");
+// Lightbox : show clicked recipe, skip next-previous
 
-    for (i=0; i<mediasArray.length; i++) {
+let slideIndex = 1;
+
+function skipRecipe(n) {
+  show(slideIndex += n)
+  document.activeElement.blur();
+}
+function openRecipe(n){
+  show(slideIndex = n)
+}
+
+function show(n){
+  const mediasArray = document.querySelectorAll(".recipes-details-item");
+  
+  if (n<1){
+    slideIndex = mediasArray.length;
+  } else if (n>mediasArray.length){
+    slideIndex = 1;
+  }
+
+  for (let i=0; i<mediasArray.length; i++){
       mediasArray[i].style.display = "none";
     }
 
-    mediasArray[n].style.display = "grid";
+  mediasArray[slideIndex-1].style.display = "grid";
+}
+
+// Filter recipes
+
+const recipes = [];
+let recipesToKeep = [];
+let clickedTags = new Set();
+
+function createArray(data) {
+  for (let i=0; i<data.length; i++) {
+    recipes.push(data[i]);
+}
+}
+
+function getSelectedTags(clicked) {
+  if (clicked.getAttribute("aria-pressed") === "true") {
+    clickedTags.add(clicked.innerHTML);
+  } else if (clicked.getAttribute("aria-pressed") === "false") {
+    clickedTags.delete(clicked.innerHTML);
   }
+}
+
+function filterRecipes() {
+  recipesToKeep = [];
+  for (recipe of recipes) {
+    if (clickedTags.has(recipe.type)) {
+      recipesToKeep.push(recipe);
+    }
+  }
+}
+
+function refreshDOM() {
+  recipesGrid.innerHTML = "";
+  recipesLightbox.innerHTML = "";
+  if (recipesToKeep.length > 0) {
+    appendDataGrid(recipesToKeep);
+    appendDataLightbox(recipesToKeep);
+  } else {
+    appendDataGrid(recipes);
+    appendDataLightbox(recipes);
+  } 
+}
+
+filters.addEventListener("click", (element)=>{
+  let clicked = element.target;
+  getSelectedTags(clicked);
+  filterRecipes();
+  refreshDOM();
+});

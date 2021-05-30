@@ -41,13 +41,10 @@
             <p class="h2 h2-closed">Recipes with moringa</p>
             <button class="btn btn-aside"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
             <div class="article-nav article-nav-closed">
-                <p class="h3 h3-search">Search recipes</p>
-                <label class="label label-short">
-                    <input type="search" placeholder="Ingredient">
-                    <i class="fas fa-search" id="search-icon"></i>
-                </label>
+                <p class="h3 nutshell">Add a dash of moringa...</p>
+                <p>And benefit from its multiple nutrients and virtues !</p>
                 <div class="article-nav-filters">
-                    <p class="h3 h3-filters">Filters</p>
+                    <p class="h3 h3-filters">Filter recipes</p>
                     <button class="tag" aria-pressed="false">Breakfast</button>
                     <button class="tag" aria-pressed="false">Dip</button>
                     <button class="tag" aria-pressed="false">Drink</button>
@@ -59,12 +56,13 @@
             </div>
         </aside>
         <section class="article">
-            <p class="h3 recipes-instructions">Hover over the recipes and click to display the details</p>
+            <p class="h3 recipes-instructions">Hover over the recipes and click to display the details :</p> 
             <div class="recipes-grid">
-                <div class="recipes-grid-text no-result"><p>Sorry, we don't have any recipe matching your criteria</p></div>
             </div>
             <div class="recipes-details">
-                <button class="btn btn-close" onclick="closeLightbox()"><em tabindex="-1" class="fas fa-times"></em></button>
+                <button class="btn btn-close" onclick="closeLightbox()" tabindex="-1"><em class="fas fa-times"></em></button>
+                <button class="btn btn-skip btn-skip-next" onclick="skipRecipe(1)" tabindex="-1"><em class="fas fa-angle-right"></em></button>
+                <button class="btn btn-skip btn-skip-previous" onclick="skipRecipe(-1)" tabindex="-1"><em class="fas fa-angle-left"></em></button>
             </div>
         </section>
     </main>

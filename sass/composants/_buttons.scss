@@ -9,14 +9,18 @@
     &-send {
         @include button($color-quaternary, 1rem, 500, 35px);
     }
-    &-close {
-        @include button($color-primary, 1rem, 400, 10px);
+    &-close, &-skip {
+        @include button-circle(1px $color-primary solid, 2rem, $color-primary, 0);
+        box-shadow: 1px 1px 1px $color-primary;
+        &:hover, &:focus {
+            box-shadow: inset 1px 1px 1px $color-primary;
+        }
         em {
             color: $color-primary;
         }
     }
     &-aside {
-        @include button-slide-text(1.2rem, $color-primary, 0, auto, $color-quaternary, none);
+        @include button-no-border(1.2rem, $color-primary, 0, auto, $color-quaternary, none);
         width: 50px;
         margin-top: 5px;
         em {
@@ -25,21 +29,21 @@
             }
         }
         &-clicked {
-            @include button-toggle-icon($color-primary, none, $color-quaternary, none);
+            @include toggle-icon($color-primary, none, $color-quaternary, none);
         }
     }
     &-show-text {
-        @include button-slide-text(0.9rem, $color-primary, 20px, 20px, $color-quaternary, 1px $color-primary solid);
+        @include button-no-border(0.9rem, $color-primary, 20px, 20px, $color-quaternary, 1px $color-primary solid);
         margin-left: 25px;
         cursor: pointer;
         em {
-            @include button-icon-circle;
+            @include button-circle(1px $color-quaternary solid, 1.5rem, $color-primary, 10px);
             &[class$="up"] {
                 display: none;
             }
         }
         &-clicked {
-            @include button-toggle-icon($color-quaternary, none, $color-primary, none);
+            @include toggle-icon($color-quaternary, none, $color-primary, none);
         }
     }
 }

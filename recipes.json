@@ -3,7 +3,7 @@
         {
             "id" : 1,
             "name" : "Energy balls",
-            "image" : "undefined",
+            "image" : "energy-balls.jpg",
             "type" : "Snack",
             "level" : "Very easy",
             "ingredients" : [
@@ -245,7 +245,7 @@
             "id" : 7,
             "name" : "Ginger-moringa syrup",
             "image" : "ginger-syrup.jpg",
-            "type" : "Drinks",
+            "type" : "Drink",
             "level" : "Very easy",
             "ingredients" :[
                 {
@@ -308,7 +308,7 @@
             "id" : 9,
             "name" : "Fresh juice",
             "image" : "fresh-juice.jpg",
-            "type" : "Drinks",
+            "type" : "Drink",
             "level" : "Very easy",
             "ingredients" :[
                 {
@@ -328,7 +328,7 @@
             "id" : 10,
             "name" : "Fresh moringa drink",
             "image" : "moringa-drink.jpg",
-            "type" : "Drinks",
+            "type" : "Drink",
             "level" : "Very easy",
             "ingredients" :[
                 {

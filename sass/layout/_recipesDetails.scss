@@ -1,0 +1,62 @@
+.recipes-details {
+    display: none;
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+    outline: 0;
+    scroll-margin-top: 237px;
+    &-item {
+        display: none;
+        grid-template-columns: 120px 1fr 0.8fr;
+        grid-template-rows: 15px 15px 15px 1fr;
+        gap: 40px 60px;
+        img {
+            @include img-container(125px, 125px, none, 50%);
+            min-height: auto;
+            grid-row: span 2;
+        }
+        .item {
+            &-title {
+                margin: auto 0;
+                grid-row: span 3;
+            }
+            &-level {
+                position: relative;
+                grid-row: span 2;
+                margin-top: auto;
+                margin-bottom: 0;
+                &::before {
+                    @include fading-line(-15px, -40px, 110px, 1px, $color-quaternary)
+                }
+            }
+            &-ingredients {
+                position: relative;
+                grid-column-start: 3;
+                grid-row: span 2;
+                &::before {
+                    @include fading-line(-15px, 0, 100%, 1px, $color-quaternary)
+                }
+                &-list {
+                    line-height: 1.4rem;
+                }
+            }
+            &-directions {
+                grid-column: span 2;
+            }
+        }
+    }
+    .btn {
+        position: absolute;
+        right: -20px;
+        &-close {
+            top : 2rem;
+        }
+        &-skip-next {
+            top: 5rem;
+        }
+        &-skip-previous {
+            top: 8rem;
+        }
+    }
+}
