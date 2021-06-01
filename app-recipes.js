@@ -16,7 +16,8 @@ fetch('https://raw.githubusercontent.com/marie-bu/EcoArava/f5393f81915e625816d72
 // DOM elements
 
 const recipesGrid = document.querySelector(".recipes-grid");
-const recipesLightbox = document.querySelector(".recipes-details");
+const recipesLightbox = document.querySelector(".recipes-lb");
+const recipesLightboxItems = document.querySelector(".recipes-lb-details");
 const recipesInstructions = document.querySelector(".recipes-instructions");
 const closeLightboxBtn = document.querySelector(".btn-close");
 
@@ -34,8 +35,8 @@ function HTMLgrid(object, i) {
 };
 
 function HTMLlightbox(object, i) {
-    recipesLightbox.innerHTML += `
-    <div class="recipes-details-item">
+    recipesLightboxItems.innerHTML += `
+    <div class="recipes-lb-item">
         <img src="recipes/`+object[i].image+`" alt="">
         <h2 class="item-title">`+object[i].name+`</h2>
         <p class="item-level"><span class="bold">Level :</span> `+object[i].level+`</p>
@@ -128,7 +129,7 @@ function openRecipe(n){
 }
 
 function show(n){
-  const mediasArray = document.querySelectorAll(".recipes-details-item");
+  const mediasArray = document.querySelectorAll(".recipes-lb-item");
   
   if (n<1){
     slideIndex = mediasArray.length;
@@ -174,14 +175,14 @@ function filterRecipes() {
 
 function refreshDOM() {
   recipesGrid.innerHTML = "";
-  recipesLightbox.innerHTML = "";
+  recipesLightboxItems.innerHTML = "";
   if (recipesToKeep.length > 0) {
     appendDataGrid(recipesToKeep);
     appendDataLightbox(recipesToKeep);
   } else {
     appendDataGrid(recipes);
     appendDataLightbox(recipes);
-  } 
+  }
 }
 
 filters.addEventListener("click", (element)=>{
@@ -189,4 +190,7 @@ filters.addEventListener("click", (element)=>{
   getSelectedTags(clicked);
   filterRecipes();
   refreshDOM();
+  if (recipesLightbox.style.display = "block") {
+    closeLightbox();
+  }
 });

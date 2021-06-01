@@ -1,0 +1,109 @@
+.index {
+    color: $color-quaternary;
+    margin-bottom: 2px $color-primary solid;
+    &-welcome {
+        //max-width: min-content;
+        margin: 5% 15% auto 15%;
+        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-column: span 3;
+        h2 {
+            margin: 20px 0 25px 0;
+            line-height: 3rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+    &-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 60px 0;
+        width: 100%;
+        margin: 15px auto 40px auto;
+        &-item {
+            position: relative;
+            display: flex;
+            height: $circle-idx;
+            width: $circle-idx;
+            cursor: pointer;
+            border-radius: 50%;
+            margin: auto;
+            &:hover, &:focus {
+                .item-text {
+                    background-color: rgba($color: $color-quaternary, $alpha: 0.9);
+                    color: white;
+                    margin-left: $half-circle-idx;
+                    transform: translateY(0%);
+                } 
+                .item-img {
+                    //box-shadow: inset 1px 1px 6px $middle-grey;
+                    margin-left: 0;
+                    transform: translateY(0%);
+                }
+            }
+            .item-img {
+                position: absolute;
+                top: 0; left: 0;
+                width: $half-circle-idx;
+                height: $circle-idx;
+                border-top-left-radius: $half-circle-idx;
+                border-bottom-left-radius: $half-circle-idx;
+                background-color: transparent;
+                overflow: hidden;
+                transition: 250ms ease-in-out;
+                margin-left: -2px;
+                transform: translateY(-5%);
+                border: 1px $color-quaternary solid;
+                box-shadow: inset -1px -1px 6px $middle-grey;
+                img {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0; left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: none;
+                    object-fit: cover;
+                }
+            }
+            .item-text {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                width: $half-circle-idx;
+                height: $circle-idx;
+                border-top-right-radius: $half-circle-idx;
+                border-bottom-right-radius: $half-circle-idx;
+                margin-left: 138px;
+                border: 1px $color-quaternary solid;
+                color: $color-quaternary;
+                transform: translateY(5%);
+                transition: 250ms ease-in-out;
+                p {
+                    padding: 20px;
+                    text-align: left;
+                    font-weight: 500;
+                    list-style: 1.5;
+                }
+            }
+        }
+    }
+    #farm {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-column: span 2;
+    }
+    #moringa {
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
+    #recipes {
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
+    #shop {
+        grid-row-start: 2;
+        grid-column: span 2;
+    }
+}

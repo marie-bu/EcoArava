@@ -32,6 +32,11 @@ h3 {
     text-transform: none;
 }
 
+#welcome {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
 .item-title {
     font-family: "Montserrat", sans-serif;
     font-size: 1.1rem;
@@ -96,15 +101,15 @@ header {
 }
 
 footer {
-    color: $color-primary;
+    color: $color-quaternary;
     li, p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         font-weight: 500;
         line-height: 0.9rem;
         text-align: justify;
     }
     a {
-        color: $color-primary;
+        color: $color-quaternary;
     }
 }
 

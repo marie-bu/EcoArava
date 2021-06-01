@@ -14,10 +14,10 @@
             position: relative;
             @include img-container(205px, 205px, transparent, 50%);
             cursor: pointer;
+            overflow: hidden;
             &:hover, &:focus {
                 figcaption {
-                    opacity: 1;
-                    transform: scale(100%);
+                    transform: scaleY(100%);
                 }
             }
         }
@@ -38,9 +38,9 @@
             @include img-container(100%, 100%, rgba($color: $color-quaternary, $alpha: 0.9), 50%);
             color: white;
             text-align: center;
-            transition: 150ms ease-in;
-            opacity: 0;
-            transform: scale(0%);
+            transition: 150ms ease-in-out;
+            transform-origin: bottom center;
+            transform: scaleY(0%);
             em {
                 font-style: normal;
                 padding: 20px;

@@ -1,9 +1,18 @@
 .btn {
     &-footer {
-        @include button($color-primary, 0.7rem, 400, 12px);
-        background-color: lighten($color: $color-quaternary, $amount: 50%);
+        @include button($color-primary, 0.75rem, 500, 12px);
+        background-color: white;
         a {
-            color:$color-primary;
+            color: $color-quaternary;
+        }
+    }
+    &-social {
+        @include button-circle(none, 2rem, $color-quaternary, 0);
+        background-color: white;
+        box-shadow: 1px 1px 1px $color-primary;
+        margin-left: 10px;
+        &:hover, &:focus {
+            box-shadow: inset 1px 1px 1px $color-primary;
         }
     }
     &-send {

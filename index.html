@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/4ff3d07870.js" crossorigin="anonymous"></script>
-    <script src="interface.js" defer></script>
+    <script src="app-nav.js" defer></script>
     <title>Eco Arava</title>
 </head>
 <body>
@@ -35,42 +35,55 @@
         </nav>
     </header>
 
-    <main>
-        <div class="landing">
-            <img src="arava-hills-and-palms-ptg.jpg" alt="">
-            <div class="landing-content">
-
+    <main class="index">
+        <div class="index-links">
+            <div class="index-welcome">
+                <h2 id="welcome">Welcome</h2>
+                <p>Eco Arava is a moringa farm in the desert : It's our project to build an eco-friendly, sustainable agriculture in our area.</p>
             </div>
-            <!--<span class="bg-image-section"></span>
-            <span class="bg-image-section"></span>
-            <span class="bg-image-section"></span>
-            <span class="bg-image-section"></span>-->
+            <div class="index-links-item" id="farm">
+                <div class="item-img">
+                    <img src="pictures/arava-hills-and-palms.jpg" alt="">
+                </div>
+                <div class="item-text">
+                    <p>Learn more about our moringa farm in the desert</p>
+                </div>
+            </div>
+            <div class="index-links-item" id="moringa">
+                <div class="item-img">
+                    <img src="pictures/moringa leaves.png" alt="">
+                </div>
+                <div class="item-text">
+                    <p>Read about moringa oleifera, an amazing plant full of virtues</p>
+                </div>
+            </div>
+            <div class="index-links-item" id="recipes">
+                <div class="item-img">
+                    <img src="recipes/pomegranate-chutney.jpg" alt="">
+                </div>
+                <div class="item-text">
+                    <p>Check out our recipes with moringa powder</p>
+                </div>
+            </div>
+            <div class="index-links-item" id="shop">
+                <div class="item-img">
+                    <img src="pictures/bag.png" alt="">
+                </div>
+                <div class="item-text">
+                    <p>Buy some organic, premium moringa powder</p>
+                </div>
+            </div>
         </div>
-        <!--<ul class="landing">
-            <li class="landing-content landing-content-farm"><a href="">
-                <p>Visit our farm, learn about agriculture in the desert and sustainability in the Arava</p>
-            </a></li>
-            <li class="landing-content landing-content-moringa"><a href="">
-                <p>Learn about Moringa Oleifera<br>An amazing plant</p>
-            </a></li>
-            <li class="landing-content landing-content-recipes"><a href="">
-                <p>Check out our recipes with Moringa</p>
-            </a></li>
-            <li class="landing-content landing-content-shop"><a href="">
-                <p>Online shop :<br>Have a look at our products</p>
-            </a></li>
-        </ul>-->
     </main>
 
     <footer>
         <div class="fNav fNav-about">
             <h3>About</h3>
-            <p>We are a family of farmers in the Arava desert and we put our efforts in making our farm eco-friendly and sustainable.</p>
-            <p>More :</p>
+            <p>We are a family of farmers in the Arava desert and we put our efforts in making our farm eco-friendly and sustainable by growing moringa oleifera.</p>
             <div>
-                <button class="btn-footer"><a href="farm.html#desert">Farming in the desert</a></button>
-                <button class="btn-footer"><a href="farm.html#sustain">Making it sustainable</a></button>
-                <button class="btn-footer"><a href="farm.html#growingMoringa">Growing moringa oleifera</a></button>
+                <button class="btn-footer"><a href="farm.html#desert">Desert farm</a></button>
+                <button class="btn-footer"><a href="farm.html#sustain">Sustainability</a></button>
+                <button class="btn-footer"><a href="moringa.html">Moringa oleifera</a></button>
             </div>
         </div>
         <div class="fNav fNav-shop">
@@ -90,11 +103,11 @@
             </ul>
         </div>
         <div class="fNav fNav-social">
-            <button class="btn-footer"><a href="https://instagram.com/ecoarava" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-instagram"></i></a></button>
-            <button class="btn-footer"><a href="https://facebook.com/EcoAravaFarming" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-facebook-f"></i></a></button>
-            <button class="btn-footer"><a href="contact.html">Contact us</a></button>
+            <button class="btn btn-social"><a href="https://instagram.com/ecoarava" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-instagram"></i></a></button>
+            <button class="btn btn-social"><a href="https://facebook.com/EcoAravaFarming" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-facebook-f"></i></href=></button>
+            <button class="btn btn-social"><a href=""><i class="fas fa-at"></i></a></button>
         </div>
     </footer>
-    
+
 </body>
 </html>
