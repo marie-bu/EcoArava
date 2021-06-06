@@ -1,12 +1,21 @@
 .contact {
     display: flex;
+    @include mobile {
+        flex-direction: column-reverse;
+    }
     &-info {
         @include aside(250px, auto, lighten($color-quaternary, 9%), white);
         margin-top: -60px;
-        padding: 60px 20px 60px 20px;
+        padding: 60px 20px;
         box-shadow: 1px 1px 6px $middle-grey;
         transform-origin: top center;
         animation: appear-vertical 350ms ease-in-out 100ms both;
+        @include mobile {
+            width: 100%;
+            margin-top: 30px;
+            padding: 35px 20px;
+            animation: none;
+        }
         &-part {
             display: flex;
             padding: 30px 0;
@@ -21,6 +30,10 @@
         margin-left: 25px;
         transform-origin: center left;
         animation: appear-horizontal 300ms ease-in-out 350ms both;
+        @include mobile {
+            margin-left: 0;
+            animation: none;
+        }
         h2 {
             color: $color-quaternary;
             padding-bottom: 25px;

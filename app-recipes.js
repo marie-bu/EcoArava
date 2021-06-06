@@ -1,6 +1,6 @@
 // fetch data
 
-fetch('https://raw.githubusercontent.com/marie-bu/EcoArava/f5393f81915e625816d7293b97e24d94cf0d1cb3/recipes.json')
+fetch('https://raw.githubusercontent.com/marie-bu/EcoArava/master/recipes.json')
     .then(function(response) {
         return response.json();
     })
@@ -37,14 +37,18 @@ function HTMLgrid(object, i) {
 function HTMLlightbox(object, i) {
     recipesLightboxItems.innerHTML += `
     <div class="recipes-lb-item">
+      <div class="item-part item-part-1">
         <img src="recipes/`+object[i].image+`" alt="">
         <h2 class="item-title">`+object[i].name+`</h2>
+      </div>
         <p class="item-level"><span class="bold">Level :</span> `+object[i].level+`</p>
+      <div class="item-part item-part-2">
         <div class="item-ingredients">
           <p class="bold">Ingredients :</p>
           <ul class="item-ingredients-list"></ul>
         </div>
         <p class="item-directions"><span class="bold">Directions :</span> `+object[i].directions+`</p>
+      </div>
     </div>`
 }
 
@@ -141,7 +145,7 @@ function show(n){
       mediasArray[i].style.display = "none";
     }
 
-  mediasArray[slideIndex-1].style.display = "grid";
+  mediasArray[slideIndex-1].style.display = "block";
 }
 
 // Filter recipes

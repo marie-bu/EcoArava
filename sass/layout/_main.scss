@@ -3,4 +3,8 @@ main {
     gap: 25px;
     padding: 55px;
     animation: appear-opacity 400ms ease-in-out 50ms both;
+    @include mobile {
+        flex-direction: column;
+        padding: 45px 25px;
+    }
 }

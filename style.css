@@ -84,7 +84,7 @@ h3 {
   text-transform: none;
 }
 
-#welcome {
+.welcome h2 {
   font-size: 3rem;
   font-weight: 600;
 }
@@ -397,6 +397,11 @@ header .logo {
   border-bottom-right-radius: 170px 80px;
   padding: 10px 0;
 }
+@media screen and (max-width: 780px) {
+  header .logo {
+    border-bottom-right-radius: 0 0;
+  }
+}
 header .logo img {
   position: absolute;
   top: 12px;
@@ -415,11 +420,18 @@ header .logo h2 {
 }
 header .nav {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   bottom: 5px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 780px) {
+  header .nav {
+    top: 10px;
+    right: 10px;
+    max-width: min-content;
+  }
 }
 header .nav-btn {
   display: flex;
@@ -431,6 +443,11 @@ header .nav-btn {
   cursor: pointer;
   transition: 250ms ease-in-out;
 }
+@media screen and (max-width: 780px) {
+  header .nav-btn {
+    background-color: transparent;
+  }
+}
 header .nav-btn-line {
   height: 3px;
   width: 20px;
@@ -438,6 +455,11 @@ header .nav-btn-line {
   margin-bottom: 3px;
   border-radius: 1px;
   transition: 150ms;
+}
+@media screen and (max-width: 780px) {
+  header .nav-btn-line {
+    background-color: #81b838;
+  }
 }
 header .nav-btn:hover .line2 {
   width: 24px;
@@ -455,6 +477,16 @@ header .nav-menu {
   transform: scale(0);
   transition: transform 500ms;
 }
+@media screen and (max-width: 780px) {
+  header .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    width: 0px;
+    height: 160px;
+    margin-left: 55px;
+    background-color: white;
+  }
+}
 header .nav-menu-link {
   display: block;
   transform: translateY(0%);
@@ -467,6 +499,11 @@ header .nav-menu-link:hover, header .nav-menu-link:focus {
 header .nav #opened-menu {
   transform: scale(1);
 }
+@media screen and (max-width: 780px) {
+  header .nav #opened-menu {
+    width: 100vw;
+  }
+}
 
 footer {
   display: grid;
@@ -478,8 +515,12 @@ footer {
   border-top-right-radius: 80px 20px;
   background-color: rgba(129, 184, 56, 0.08);
 }
-footer .fNav {
-  margin: auto 0;
+@media screen and (max-width: 780px) {
+  footer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 25px;
+  }
 }
 footer .fNav h3, footer .fNav p {
   padding-bottom: 5px;
@@ -499,6 +540,7 @@ footer .fNav-social {
   justify-content: space-evenly;
   width: fit-content;
   grid-row: span 2;
+  margin: auto;
 }
 footer ul {
   display: flex;
@@ -506,12 +548,23 @@ footer ul {
   flex-wrap: wrap;
   gap: 10px 20px;
 }
+@media screen and (max-width: 780px) {
+  footer ul {
+    flex-direction: column;
+  }
+}
 
 main {
   display: flex;
   gap: 25px;
   padding: 55px;
   animation: appear-opacity 400ms ease-in-out 50ms both;
+}
+@media screen and (max-width: 780px) {
+  main {
+    flex-direction: column;
+    padding: 45px 25px;
+  }
 }
 
 aside {
@@ -529,9 +582,23 @@ aside h2 {
 aside a {
   color: #327319;
 }
+@media screen and (max-width: 780px) {
+  aside {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    margin-top: -25px;
+    padding-top: 25px;
+    border-radius: 0;
+    border-bottom: 1px #81b838 solid;
+  }
+}
 aside .h2 {
   position: relative;
-  max-width: 50px;
+  max-width: min-content;
   padding-bottom: 10px;
 }
 aside .h2::before {
@@ -554,6 +621,16 @@ aside .h2-closed::before {
   background: #81b838;
   transition: 250ms ease-in-out 280ms;
 }
+@media screen and (max-width: 780px) {
+  aside .h2-closed::before {
+    display: none;
+  }
+}
+@media screen and (max-width: 780px) {
+  aside .btn-aside {
+    display: none;
+  }
+}
 aside .article-nav {
   min-width: 200px;
   transition: 300ms ease-in-out 230ms;
@@ -561,8 +638,21 @@ aside .article-nav {
   transform: scaleY(1);
   opacity: 1;
 }
+@media screen and (max-width: 780px) {
+  aside .article-nav {
+    min-width: auto;
+  }
+}
 aside .article-nav .nutshell, aside .article-nav .h3-search {
   margin: 20px 0;
+}
+@media screen and (max-width: 780px) {
+  aside .article-nav .nutshell, aside .article-nav .h3-search {
+    display: none;
+  }
+  aside .article-nav .nutshell + p, aside .article-nav .h3-search + p {
+    display: none;
+  }
 }
 aside .article-nav .read-more, aside .article-nav .h3-filters {
   position: relative;
@@ -578,6 +668,11 @@ aside .article-nav .read-more::after, aside .article-nav .h3-filters::after {
   width: 50%;
   background: linear-gradient(to right, #327319, rgba(255, 255, 255, 0));
 }
+@media screen and (max-width: 780px) {
+  aside .article-nav .read-more, aside .article-nav .h3-filters {
+    display: none;
+  }
+}
 aside .article-nav .anchor-link {
   padding: 6px 0;
   transition: 50ms;
@@ -586,10 +681,31 @@ aside .article-nav .anchor-link:hover, aside .article-nav .anchor-link:focus {
   font-size: 1.05rem;
   margin-left: -2px;
 }
+@media screen and (max-width: 780px) {
+  aside .article-nav .anchor-link {
+    padding-top: 0;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 780px) {
+  aside .article-nav-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -10px -20px 10px 0;
+  }
+}
 aside .article-nav-closed {
   transition: 300ms ease-in-out;
   transform: scaleY(0);
   opacity: 0;
+}
+@media screen and (max-width: 780px) {
+  aside .article-nav-closed {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .article {
@@ -598,6 +714,11 @@ aside .article-nav-closed {
   margin: 0 auto 0 -110px;
   transition: 250ms ease-in-out 280ms;
 }
+@media screen and (max-width: 780px) {
+  .article {
+    margin-left: auto;
+  }
+}
 .article-part {
   display: flex;
   gap: 25px;
@@ -605,8 +726,19 @@ aside .article-nav-closed {
   margin: 0 auto 80px auto;
   scroll-margin-top: 20px;
 }
+@media screen and (max-width: 489px) {
+  .article-part {
+    flex-direction: column;
+    scroll-margin-top: 150px;
+  }
+}
 .article-part:last-child {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 980px) {
+  .article-part {
+    max-width: 95%;
+  }
 }
 .article img {
   flex: 1;
@@ -615,6 +747,12 @@ aside .article-nav-closed {
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
+}
+@media screen and (max-width: 980px) {
+  .article img {
+    flex: 2;
+    max-height: 260px;
+  }
 }
 .article #context img {
   height: 100%;
@@ -654,12 +792,23 @@ aside .article-nav-closed {
   margin-left: 120px;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 780px) {
+  .recipes-instructions {
+    display: none;
+  }
+}
 .recipes-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  max-width: 80%;
+  max-width: 90%;
   margin-left: 120px;
+}
+@media screen and (max-width: 780px) {
+  .recipes-grid {
+    margin: 0 auto;
+    justify-content: center;
+  }
 }
 .recipes-grid-item {
   position: relative;
@@ -673,6 +822,12 @@ aside .article-nav-closed {
 }
 .recipes-grid-item:hover figcaption, .recipes-grid-item:focus figcaption {
   transform: scaleY(100%);
+}
+@media screen and (max-width: 980px) {
+  .recipes-grid-item {
+    width: 180px;
+    height: 180px;
+  }
 }
 .recipes-grid img {
   position: absolute;
@@ -705,9 +860,24 @@ aside .article-nav-closed {
   transform-origin: bottom center;
   transform: scaleY(0%);
 }
+@media screen and (max-width: 780px) {
+  .recipes-grid figcaption {
+    transform: scaleY(100%);
+    height: 40%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    align-items: flex-start;
+  }
+}
 .recipes-grid figcaption em {
   font-style: normal;
   padding: 20px;
+}
+@media screen and (max-width: 780px) {
+  .recipes-grid figcaption em {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+  }
 }
 
 .recipes-lb {
@@ -719,59 +889,63 @@ aside .article-nav-closed {
   outline: 0;
   scroll-margin-top: 237px;
 }
+@media screen and (max-width: 980px) {
+  .recipes-lb {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 780px) {
+  .recipes-lb {
+    padding: 0;
+    margin-top: 1rem;
+  }
+}
 .recipes-lb-item {
   display: none;
-  grid-template-columns: 120px 1fr 0.8fr;
-  grid-template-rows: 15px 15px 15px 1fr;
-  gap: 40px 60px;
 }
-.recipes-lb-item img {
+.recipes-lb-item .item-part {
+  display: flex;
+  margin-bottom: 25px;
+  gap: 50px;
+}
+@media screen and (max-width: 780px) {
+  .recipes-lb-item .item-part {
+    gap: 25px;
+  }
+}
+.recipes-lb-item .item-part img {
   width: 125px;
   height: 125px;
   background-color: none;
   border-radius: 50%;
   box-shadow: 1px 1px 1px #909090, inset -1px -1px 6px #303030;
-  min-height: auto;
-  grid-row: span 2;
+  max-width: 125px;
+}
+@media screen and (max-width: 580px) {
+  .recipes-lb-item .item-part-2 {
+    flex-direction: column;
+  }
 }
 .recipes-lb-item .item-title {
-  margin: auto 0;
-  grid-row: span 3;
+  margin: auto 0 auto 75px;
+}
+@media screen and (max-width: 580px) {
+  .recipes-lb-item .item-title {
+    margin: auto 0;
+  }
 }
 .recipes-lb-item .item-level {
-  position: relative;
-  grid-row: span 2;
-  margin-top: auto;
-  margin-bottom: 0;
-}
-.recipes-lb-item .item-level::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  bottom: -40px;
-  height: 110px;
-  width: 1px;
-  background: #81b838;
+  padding: 10px 0;
+  border-top: 1px #81b838 solid;
 }
 .recipes-lb-item .item-ingredients {
-  position: relative;
-  grid-column-start: 3;
-  grid-row: span 2;
-}
-.recipes-lb-item .item-ingredients::before {
-  content: "";
-  position: absolute;
-  left: -15px;
-  bottom: 0;
-  height: 100%;
-  width: 1px;
-  background: #81b838;
+  min-width: 200px;
 }
 .recipes-lb-item .item-ingredients-list {
   line-height: 1.4rem;
 }
-.recipes-lb-item .item-directions {
-  grid-column: span 2;
+.recipes-lb-item .item-ingredients-list li {
+  margin-bottom: 5px;
 }
 .recipes-lb .btn {
   position: absolute;
@@ -780,36 +954,65 @@ aside .article-nav-closed {
 .recipes-lb .btn-close {
   top: 2rem;
 }
+@media screen and (max-width: 780px) {
+  .recipes-lb .btn-close {
+    top: -1.5rem;
+    right: 0.3rem;
+  }
+}
 .recipes-lb .btn-skip-next {
   top: 5rem;
 }
+@media screen and (max-width: 780px) {
+  .recipes-lb .btn-skip-next {
+    display: none;
+  }
+}
 .recipes-lb .btn-skip-previous {
   top: 8rem;
+}
+@media screen and (max-width: 780px) {
+  .recipes-lb .btn-skip-previous {
+    display: none;
+  }
 }
 
 .index {
   color: #81b838;
   margin-bottom: 2px #327319 solid;
 }
-.index-welcome {
-  margin: 5% 15% auto 15%;
-  grid-row-start: 1;
-  grid-column-start: 2;
-  grid-column: span 3;
+.index .welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin: auto;
+  width: 100%;
+  padding: 20px 0 80px 0;
 }
-.index-welcome h2 {
-  margin: 20px 0 25px 0;
-  line-height: 3rem;
+@media screen and (max-width: 780px) {
+  .index .welcome {
+    flex-direction: column;
+    padding: 0;
+  }
 }
-.index-welcome p {
+.index .welcome p {
   font-size: 1.1rem;
+  line-height: 1.4rem;
+  max-width: 40%;
+  text-align: left;
+}
+@media screen and (max-width: 780px) {
+  .index .welcome p {
+    max-width: 80%;
+  }
 }
 .index-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 60px 0;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px 40px;
+  width: 95%;
   margin: 15px auto 40px auto;
 }
 .index-links-item {
@@ -898,6 +1101,11 @@ aside .article-nav-closed {
 .contact {
   display: flex;
 }
+@media screen and (max-width: 780px) {
+  .contact {
+    flex-direction: column-reverse;
+  }
+}
 .contact-info {
   width: 250px;
   height: auto;
@@ -905,7 +1113,7 @@ aside .article-nav-closed {
   background-color: #97cb53;
   color: white;
   margin-top: -60px;
-  padding: 60px 20px 60px 20px;
+  padding: 60px 20px;
   box-shadow: 1px 1px 6px #505050;
   transform-origin: top center;
   animation: appear-vertical 350ms ease-in-out 100ms both;
@@ -915,6 +1123,14 @@ aside .article-nav-closed {
 }
 .contact-info a {
   color: white;
+}
+@media screen and (max-width: 780px) {
+  .contact-info {
+    width: 100%;
+    margin-top: 30px;
+    padding: 35px 20px;
+    animation: none;
+  }
 }
 .contact-info-part {
   display: flex;
@@ -929,6 +1145,12 @@ aside .article-nav-closed {
   margin-left: 25px;
   transform-origin: center left;
   animation: appear-horizontal 300ms ease-in-out 350ms both;
+}
+@media screen and (max-width: 780px) {
+  .contact form {
+    margin-left: 0;
+    animation: none;
+  }
 }
 .contact form h2 {
   color: #81b838;

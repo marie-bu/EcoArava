@@ -2,9 +2,21 @@ aside {
     position: sticky;
     top: 20px;
     @include aside(200px, min-content, white, $color-primary);
+    @include mobile {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        margin-top: -25px;
+        padding-top: 25px;
+        border-radius: 0;
+        border-bottom: 1px $color-quaternary solid;
+    }
     .h2 {
         position: relative;
-        max-width: 50px;
+        max-width: min-content;
         padding-bottom: 10px;
         &::before {
             @include fading-line(0, 0, 1px, 200px, $color-quaternary);
@@ -13,6 +25,14 @@ aside {
         &-closed::before {
             @include fading-line(0, 0, 1px, 50px, $color-quaternary);
             transition: 250ms ease-in-out 280ms;
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+    .btn-aside {
+        @include mobile {
+            display: none;
         }
     }
     .article-nav {
@@ -21,8 +41,17 @@ aside {
         transform-origin: top center;
         transform: scaleY(1);
         opacity: 1;
+        @include mobile {
+            min-width: auto;
+        }
         .nutshell, .h3-search {
             margin: 20px 0;
+            @include mobile {
+                display: none;
+                + p {
+                    display: none;
+                }
+            }
         }
         .read-more, .h3-filters {
             position: relative;
@@ -30,6 +59,9 @@ aside {
             padding: 30px 0 6px 0;
             &::after {
                 @include fading-line(0px, 0px, 1px, 50%, linear-gradient(to right, $color-primary, rgba(255, 255, 255, 0)));
+            }
+            @include mobile {
+                display: none;
             }
         }
         .anchor-link {
@@ -39,11 +71,28 @@ aside {
                 font-size: 1.05rem;
                 margin-left: -2px;
             }
+            @include mobile {
+                padding-top: 0;
+                padding-bottom: 10px;
+                text-align: left;
+            }
+        }
+        &-filters {
+            @include mobile {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: -10px -20px 10px 0;
+            }
         }
         &-closed {
             transition: 300ms ease-in-out;
             transform: scaleY(0);
             opacity: 0;
+            @include mobile {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     }
 }

@@ -12,6 +12,9 @@ header {
         border-bottom: 2px $color-quaternary solid;
         border-bottom-right-radius: 170px 80px;
         padding: 10px 0;
+        @include mobile {
+            border-bottom-right-radius: 0 0;
+        }
         img {
             position: absolute;
             top: 12px; left: 50%;
@@ -29,11 +32,16 @@ header {
     }
     .nav {
         position: absolute;
-        z-index: 1;
+        z-index: 0;
         bottom: 5px;
         width: 100%;
         display: flex;
         justify-content: space-between;
+        @include mobile {
+            top: 10px;
+            right: 10px;
+            max-width: min-content;
+        }
         &-btn {
             display: flex;
             flex-direction: column;
@@ -43,6 +51,9 @@ header {
             margin-right: 10px;
             cursor: pointer;
             transition: 250ms ease-in-out;
+            @include mobile {
+                background-color: transparent;
+            }
             &-line {
                 height: 3px;
                 width: 20px;
@@ -50,6 +61,9 @@ header {
                 margin-bottom: 3px;
                 border-radius: 1px;
                 transition: 150ms;
+                @include mobile {
+                    background-color: $color-quaternary;
+                }
             }
             &:hover .line2 {
                 width: 24px;
@@ -67,6 +81,14 @@ header {
             transform-origin: right;
             transform: scale(0);
             transition: transform 500ms;
+            @include mobile {
+                flex-direction: column;
+                align-items: center;
+                width: 0px;
+                height: 160px;
+                margin-left: 55px;
+                background-color: white;
+            }
             &-link {
                 display: block;
                 transform: translateY(0%);
@@ -80,6 +102,9 @@ header {
         }
         #opened-menu {
             transform: scale(1);
+            @include mobile {
+                width: 100vw;
+            }
         }
     }
 }

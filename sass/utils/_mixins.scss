@@ -95,3 +95,15 @@
         color: $color;
     }
 }
+
+@mixin tablet {
+    @media screen and (max-width: 980px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 780px) {
+        @content;
+    }
+}

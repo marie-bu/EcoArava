@@ -7,8 +7,12 @@ footer {
     border-top: 1px $color-quaternary solid;
     border-top-right-radius: 80px 20px;
     background-color: rgba($color: $color-quaternary, $alpha: 0.08);
+    @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 25px;
+    }
     .fNav {
-        margin: auto 0;
         h3, p {
             padding-bottom: 5px;
         }
@@ -27,6 +31,7 @@ footer {
             justify-content: space-evenly;
             width: fit-content;
             grid-row: span 2;
+            margin: auto;
         }
     }
     ul {
@@ -34,5 +39,8 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
         gap : 10px 20px;
+        @include mobile {
+            flex-direction: column;
+        }
     }
 }

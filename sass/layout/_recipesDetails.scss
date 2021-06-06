@@ -6,43 +6,51 @@
     padding: 40px;
     outline: 0;
     scroll-margin-top: 237px;
+    @include tablet {
+        max-width: 100%;
+    }
+    @include mobile {
+        padding: 0;
+        margin-top: 1rem;
+    }
     &-item {
         display: none;
-        grid-template-columns: 120px 1fr 0.8fr;
-        grid-template-rows: 15px 15px 15px 1fr;
-        gap: 40px 60px;
-        img {
-            @include img-container(125px, 125px, none, 50%);
-            min-height: auto;
-            grid-row: span 2;
+        .item-part {
+            display: flex;
+            margin-bottom: 25px;
+            gap: 50px;
+            @include mobile {
+                gap: 25px;
+            }
+            img {
+                @include img-container(125px, 125px, none, 50%);
+                max-width: 125px;
+            }
+            &-2 {
+                @media screen and (max-width: 580px) {
+                    flex-direction: column;
+                }
+            }
         }
         .item {
             &-title {
-                margin: auto 0;
-                grid-row: span 3;
+                margin: auto 0 auto 75px;
+                @media screen and (max-width: 580px) {
+                    margin: auto 0;
+                }
             }
             &-level {
-                position: relative;
-                grid-row: span 2;
-                margin-top: auto;
-                margin-bottom: 0;
-                &::before {
-                    @include fading-line(-15px, -40px, 110px, 1px, $color-quaternary)
-                }
+                padding: 10px 0;
+                border-top: 1px $color-quaternary solid;
             }
             &-ingredients {
-                position: relative;
-                grid-column-start: 3;
-                grid-row: span 2;
-                &::before {
-                    @include fading-line(-15px, 0, 100%, 1px, $color-quaternary)
-                }
+                min-width: 200px;
                 &-list {
                     line-height: 1.4rem;
+                    li {
+                        margin-bottom: 5px;
+                    }
                 }
-            }
-            &-directions {
-                grid-column: span 2;
             }
         }
     }
@@ -51,12 +59,22 @@
         right: -20px;
         &-close {
             top : 2rem;
+            @include mobile {
+                top: -1.5rem;
+                right: 0.3rem;
+            }
         }
         &-skip-next {
             top: 5rem;
+            @include mobile {
+                display: none;
+            }
         }
         &-skip-previous {
             top: 8rem;
+            @include mobile {
+                display: none;
+            }
         }
     }
 }

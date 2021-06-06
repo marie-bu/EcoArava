@@ -3,14 +3,24 @@
     color: $color-primary;
     margin: 0 auto 0 -110px;
     transition: 250ms ease-in-out 280ms;
+    @include mobile {
+        margin-left: auto;
+    }
     &-part {
         display: flex;
         gap: 25px;
         max-width: 80%;
         margin: 0 auto 80px auto;
         scroll-margin-top: 20px;
+        @media screen and (max-width: 489px) {
+            flex-direction: column;
+            scroll-margin-top: 150px;
+        }
         &:last-child {
             margin-bottom: 20px;
+        }
+        @include tablet {
+            max-width: 95%;
         }
     }
     img {
@@ -20,6 +30,10 @@
         max-height: 300px;
         object-fit: cover;
         border-radius: 10px;
+        @include tablet {
+            flex: 2;
+            max-height: 260px;
+        }
     }
     #context img {
         height: 100%;
