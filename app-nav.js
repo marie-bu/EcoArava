@@ -13,6 +13,7 @@ function openNav() {
     line2.style.width = "24px";
     line3.style.width = "29px";
     menu.id = "opened-menu";
+    menuBtn.setAttribute("aria-label", "Close navigation menu");
 }
 
 function closeNav() {
@@ -20,6 +21,7 @@ function closeNav() {
     line2.style.width = null;
     line3.style.width = null;
     menu.id = null;
+    menuBtn.setAttribute("aria-label", "Open navigation menu");
 }
 
 menuBtn.addEventListener("click", ()=> {

@@ -11,6 +11,9 @@
         background-color: white;
         box-shadow: 1px 1px 1px $color-primary;
         margin-left: 10px;
+        i {
+            line-height: 2rem;
+        }
         &:hover, &:focus {
             box-shadow: inset 1px 1px 1px $color-primary;
         }

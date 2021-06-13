@@ -22,6 +22,11 @@
         </a>
         </div>
         <nav class="nav">
+            <button class="nav-btn" aria-label="Open navigation menu" aria-expanded="false">
+                <div class="nav-btn-line line1"></div>
+                <div class="nav-btn-line line2"></div>
+                <div class="nav-btn-line line3"></div>
+            </button>
             <ul class="nav-menu">
                 <li><a href="farm.html" class="nav-menu-link">The farm</a></li>
                 <li><a href="moringa.html" class="nav-menu-link">Moringa</a></li>
@@ -29,22 +34,17 @@
                 <li><a href="https://ecoarava.ecwid.com/" class="nav-menu-link">Shop</a></li>
                 <li><a href="contact.html" class="nav-menu-link">Contact</a></li>
             </ul>
-            <button class="nav-btn" aria-expanded="false">
-                <div class="nav-btn-line line1"></div>
-                <div class="nav-btn-line line2"></div>
-                <div class="nav-btn-line line3"></div>
-            </button>
         </nav>
     </header>
 
     <main class="recipes">
         <aside>
             <p class="h2 h2-closed">Recipes with moringa</p>
-            <button class="btn btn-aside"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
+            <button class="btn btn-aside" aria-label="Open side-bar"><em class="fas fa-angle-down"></em><em class="fas fa-angle-up"></em></button>
             <div class="article-nav article-nav-closed">
                 <p class="h3 nutshell">Add a dash of moringa...</p>
                 <p>And benefit from its multiple nutrients and virtues !</p>
-                <div class="article-nav-filters">
+                <div class="article-nav-filters" role="group" aria-label="Filter recipes by clicking on tags">
                     <p class="h3 h3-filters">Filter recipes</p>
                     <button class="tag" aria-pressed="false">Breakfast</button>
                     <button class="tag" aria-pressed="false">Dip</button>
@@ -61,25 +61,25 @@
             <div class="recipes-grid">
             </div>
             <div class="recipes-lb">
-                <button class="btn btn-close" onclick="closeLightbox()" tabindex="-1"><em class="fas fa-times"></em></button>
-                <button class="btn btn-skip btn-skip-next" onclick="skipRecipe(1)" tabindex="-1"><em class="fas fa-angle-right"></em></button>
-                <button class="btn btn-skip btn-skip-previous" onclick="skipRecipe(-1)" tabindex="-1"><em class="fas fa-angle-left"></em></button>
                 <div class="recipes-lb-details"></div>
+                <button class="btn btn-close" onclick="closeLightbox()" aria-label="Return to all recipes"><em class="fas fa-times"></em></button>
+                <button class="btn btn-skip btn-skip-next" onclick="skipRecipe(1)" aria-label="Next recipe"><em class="fas fa-angle-right"></em></button>
+                <button class="btn btn-skip btn-skip-previous" onclick="skipRecipe(-1)" aria-label="Previous recipe"><em class="fas fa-angle-left"></em></button>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="fNav fNav-about">
+        <div class="fNav fNav-about" role="navigation" aria-label="About">
             <h3>About</h3>
             <p>We are a family of farmers in the Arava desert and we put our efforts in making our farm eco-friendly and sustainable by growing moringa oleifera.</p>
             <div>
-                <button class="btn-footer"><a href="farm.html#desert">Desert farm</a></button>
-                <button class="btn-footer"><a href="farm.html#sustain">Sustainability</a></button>
-                <button class="btn-footer"><a href="moringa.html">Moringa oleifera</a></button>
+                <a href="farm.html#desert" class="btn-footer">Desert farm</a>
+                <a href="farm.html#sustain" class="btn-footer">Sustainability</a>
+                <a href="moringa.html" class="btn-footer">Moringa oleifera</a>
             </div>
         </div>
-        <div class="fNav fNav-shop">
+        <div class="fNav fNav-shop" role="navigation" aria-label="Shop">
             <h3>Shop</h3>
             <ul>
                 <li><a href="">Products</a></li>
@@ -87,7 +87,7 @@
                 <li><a href="">Checkout</a></li>
             </ul>
         </div>
-        <div class="fNav fNav-help">
+        <div class="fNav fNav-help" role="navigation" aria-label="Help">
             <h3>Help and FAQs</h3>
             <ul>
                 <li><a href="">Paiements and security</a></li>
@@ -95,10 +95,10 @@
                 <li><a href="">Return policy</a></li>
             </ul>
         </div>
-        <div class="fNav fNav-social">
-            <button class="btn btn-social"><a href="https://instagram.com/ecoarava" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-instagram"></i></a></button>
-            <button class="btn btn-social"><a href="https://facebook.com/EcoAravaFarming" target="_blank" rel="noopener noreferrer nofollow"><i class="fab fa-facebook-f"></i></href=></button>
-            <button class="btn btn-social"><a href=""><i class="fas fa-at"></i></a></button>
+        <div class="fNav fNav-social" role="navigation" aria-label="Social media and contact">
+            <a href="https://instagram.com/ecoarava" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-social" aria-label="Go to our Instagram account"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/EcoAravaFarming" target="_blank" rel="noopener noreferrer nofollow" class="btn btn-social" aria-label="Visit our Facebook page"><i class="fab fa-facebook-f"></i></href=>
+            <a href="contact.html" class="btn btn-social" aria-label="Contact us"><i class="fas fa-at"></i></a>
         </div>
     </footer>
 

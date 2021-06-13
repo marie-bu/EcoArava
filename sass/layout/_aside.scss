@@ -37,6 +37,7 @@ aside {
     }
     .article-nav {
         min-width: 200px;
+        visibility: visible;
         transition: 300ms ease-in-out 230ms;
         transform-origin: top center;
         transform: scaleY(1);
@@ -86,10 +87,12 @@ aside {
             }
         }
         &-closed {
+            visibility: hidden;
             transition: 300ms ease-in-out;
             transform: scaleY(0);
             opacity: 0;
             @include mobile {
+                visibility: visible;
                 transform: scale(1);
                 opacity: 1;
             }

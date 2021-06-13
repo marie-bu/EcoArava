@@ -34,7 +34,10 @@
             margin-left: 0;
             animation: none;
         }
-        h2 {
+        fieldset {
+            border: none;
+        }
+        legend {
             color: $color-quaternary;
             padding-bottom: 25px;
         }

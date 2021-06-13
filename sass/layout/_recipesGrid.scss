@@ -58,6 +58,9 @@
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
                 align-items: flex-start;
+                background-color: $color-quaternary;
+                box-shadow: none;
+                border-top: 1px $color-primary solid;
             }
             em {
                 font-style: normal;

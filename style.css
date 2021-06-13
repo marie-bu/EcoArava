@@ -202,6 +202,9 @@ input::placeholder, textarea::placeholder {
   box-shadow: 1px 1px 1px #327319;
   margin-left: 10px;
 }
+.btn-social i {
+  line-height: 2rem;
+}
 .btn-social:hover, .btn-social:focus {
   box-shadow: inset 1px 1px 1px #327319;
 }
@@ -424,6 +427,7 @@ header .nav {
   bottom: 5px;
   width: 100%;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
 }
 @media screen and (max-width: 780px) {
@@ -473,9 +477,10 @@ header .nav-menu {
   align-self: center;
   width: calc(100% - 170px);
   padding-bottom: 5px;
-  transform-origin: right;
+  visibility: hidden;
+  transform-origin: center right;
   transform: scale(0);
-  transition: transform 500ms;
+  transition: 500ms ease-in-out;
 }
 @media screen and (max-width: 780px) {
   header .nav-menu {
@@ -497,6 +502,7 @@ header .nav-menu-link:hover, header .nav-menu-link:focus {
   color: #66912c;
 }
 header .nav #opened-menu {
+  visibility: visible;
   transform: scale(1);
 }
 @media screen and (max-width: 780px) {
@@ -633,6 +639,7 @@ aside .h2-closed::before {
 }
 aside .article-nav {
   min-width: 200px;
+  visibility: visible;
   transition: 300ms ease-in-out 230ms;
   transform-origin: top center;
   transform: scaleY(1);
@@ -697,12 +704,14 @@ aside .article-nav .anchor-link:hover, aside .article-nav .anchor-link:focus {
   }
 }
 aside .article-nav-closed {
+  visibility: hidden;
   transition: 300ms ease-in-out;
   transform: scaleY(0);
   opacity: 0;
 }
 @media screen and (max-width: 780px) {
   aside .article-nav-closed {
+    visibility: visible;
     transform: scale(1);
     opacity: 1;
   }
@@ -777,9 +786,12 @@ aside .article-nav-closed {
   color: #419520;
 }
 .article .hidden-p {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0 !important;
 }
 .article .optional-p {
+  max-height: auto;
   margin: 10px auto 35px 25px;
 }
 .article-narrow {
@@ -867,6 +879,9 @@ aside .article-nav-closed {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     align-items: flex-start;
+    background-color: #81b838;
+    box-shadow: none;
+    border-top: 1px #327319 solid;
   }
 }
 .recipes-grid figcaption em {
@@ -1152,7 +1167,10 @@ aside .article-nav-closed {
     animation: none;
   }
 }
-.contact form h2 {
+.contact form fieldset {
+  border: none;
+}
+.contact form legend {
   color: #81b838;
   padding-bottom: 25px;
 }

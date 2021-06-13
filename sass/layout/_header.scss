@@ -36,6 +36,7 @@ header {
         bottom: 5px;
         width: 100%;
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
         @include mobile {
             top: 10px;
@@ -78,9 +79,10 @@ header {
             align-self: center;
             width: calc(#{$fullwidth} - 170px);
             padding-bottom: 5px;
-            transform-origin: right;
+            visibility: hidden;
+            transform-origin: center right;
             transform: scale(0);
-            transition: transform 500ms;
+            transition: 500ms ease-in-out;
             @include mobile {
                 flex-direction: column;
                 align-items: center;
@@ -101,6 +103,7 @@ header {
             }
         }
         #opened-menu {
+            visibility: visible;
             transform: scale(1);
             @include mobile {
                 width: 100vw;

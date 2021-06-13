@@ -58,9 +58,12 @@
         }
     }
     .hidden-p {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        margin: 0 !important;
     }
     .optional-p {
+        max-height: auto;
         margin: 10px auto 35px 25px;
     }
     &-narrow {

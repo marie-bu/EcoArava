@@ -28,7 +28,7 @@ const filters = document.querySelector(".article-nav-filters");
 
 function HTMLgrid(object, i) {
     recipesGrid.innerHTML += `
-        <figure class="recipes-grid-item" onclick="openLightbox();openRecipe(`+[i+1]+`)">
+        <figure class="recipes-grid-item" tabindex="0" onkeydown="openLightboxK(event);openRecipeK(event, `+[i+1]+`)" onclick="openLightbox();openRecipe(`+[i+1]+`)">
             <img src="recipes/`+object[i].image+`" alt="">
             <figcaption><em class="centered">`+object[i].name+`</em></figcaption>
         </figure>`
@@ -111,12 +111,25 @@ function openLightbox() {
   recipesLightbox.focus();
 
   recipesGrid.style.display = "none";
+  recipesGrid.removeAttribute("tabindex", "0");
+  
   recipesInstructions.style.display = "none";
+}
+
+function openLightboxK(event) {
+  if (event.key == "Enter") {
+    openLightbox();
+  }
 }
 
 function closeLightbox(){
   recipesLightbox.style.display = null;
+  recipesLightbox.removeAttribute("tabindex", "0");
+
   recipesGrid.style.display = null;
+  recipesGrid.setAttribute("tabindex", "0");
+  recipesGrid.focus();
+
   recipesInstructions.style = null;
 }
   
@@ -126,10 +139,15 @@ let slideIndex = 1;
 
 function skipRecipe(n) {
   show(slideIndex += n)
-  document.activeElement.blur();
 }
 function openRecipe(n){
   show(slideIndex = n)
+}
+
+function openRecipeK(event, n) {
+  if (event.key == "Enter") {
+    openRecipe(n);
+  }
 }
 
 function show(n){
@@ -143,9 +161,13 @@ function show(n){
 
   for (let i=0; i<mediasArray.length; i++){
       mediasArray[i].style.display = "none";
+      mediasArray[i].removeAttribute("tabindex","0");
+      mediasArray[i].blur();
     }
 
   mediasArray[slideIndex-1].style.display = "block";
+  mediasArray[slideIndex-1].setAttribute("tabindex", "0");
+  mediasArray[slideIndex-1].focus();
 }
 
 // Filter recipes
