@@ -19,6 +19,10 @@ footer {
         &-about {
             max-width: 440px;
             grid-row : span 2;
+            div {
+                display: flex;
+                flex-wrap: wrap;
+            }
         }
         &-help {
             max-width: 400px;
