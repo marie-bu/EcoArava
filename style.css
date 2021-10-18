@@ -133,31 +133,15 @@ header .logo-h2 {
   text-transform: lowercase;
   text-align: center;
 }
-header .nav i {
-  font-size: 1.4rem;
-  color: white;
-}
-header .nav-menu {
+
+.nav-menu, .footer-nav {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 0.8rem;
   text-transform: uppercase;
 }
-header .nav-menu-link {
-  color: #81b838;
-}
-
-footer {
-  color: #81b838;
-}
-footer li, footer p {
-  font-size: 0.85rem;
-  font-weight: 500;
-  line-height: 0.9rem;
-  text-align: justify;
-}
-footer a {
+.nav-menu-link, .footer-nav-link {
   color: #81b838;
 }
 
@@ -171,39 +155,23 @@ input::placeholder, textarea::placeholder {
   color: rgba(50, 115, 25, 0.8);
 }
 
-.btn-footer {
-  border: none;
-  background: none;
-  border-radius: 15px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 6px 12px;
-  margin: 10px 10px 0 0;
-  box-shadow: 1px 1px 1px #327319;
-  background-color: white;
-}
-.btn-footer:hover, .btn-footer:focus {
-  box-shadow: inset 1px 1px 1px #327319;
-}
-.btn-footer a {
-  color: #81b838;
-}
 .btn-social {
   border: none;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background: none;
   text-align: center;
-  line-height: 2rem;
+  line-height: 1.5rem;
   color: #81b838;
   margin-left: 0;
-  background-color: white;
+  background-color: #81b838;
   box-shadow: 1px 1px 1px #327319;
-  margin-left: 10px;
 }
 .btn-social i {
-  line-height: 2rem;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  color: white;
 }
 .btn-social:hover, .btn-social:focus {
   box-shadow: inset 1px 1px 1px #327319;
@@ -421,7 +389,8 @@ header .logo h2 {
   margin-bottom: 6px;
   transition: 250ms ease-in-out;
 }
-header .nav {
+
+.nav {
   position: absolute;
   z-index: 0;
   bottom: 5px;
@@ -431,13 +400,13 @@ header .nav {
   justify-content: space-between;
 }
 @media screen and (max-width: 780px) {
-  header .nav {
+  .nav {
     top: 10px;
     right: 10px;
     max-width: min-content;
   }
 }
-header .nav-btn {
+.nav-btn {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -448,11 +417,11 @@ header .nav-btn {
   transition: 250ms ease-in-out;
 }
 @media screen and (max-width: 780px) {
-  header .nav-btn {
+  .nav-btn {
     background-color: transparent;
   }
 }
-header .nav-btn-line {
+.nav-btn-line {
   height: 3px;
   width: 20px;
   background-color: white;
@@ -461,17 +430,17 @@ header .nav-btn-line {
   transition: 150ms;
 }
 @media screen and (max-width: 780px) {
-  header .nav-btn-line {
+  .nav-btn-line {
     background-color: #81b838;
   }
 }
-header .nav-btn:hover .line2 {
+.nav-btn:hover .line2 {
   width: 24px;
 }
-header .nav-btn:hover .line3 {
+.nav-btn:hover .line3 {
   width: 29px;
 }
-header .nav-menu {
+.nav-menu {
   display: flex;
   justify-content: space-evenly;
   align-self: center;
@@ -483,7 +452,7 @@ header .nav-menu {
   transition: 500ms ease-in-out;
 }
 @media screen and (max-width: 780px) {
-  header .nav-menu {
+  .nav-menu {
     flex-direction: column;
     align-items: center;
     width: 0px;
@@ -492,78 +461,46 @@ header .nav-menu {
     background-color: white;
   }
 }
-header .nav-menu-link {
+.nav-menu-link {
   display: block;
   transform: translateY(0%);
   transition: 50ms;
 }
-header .nav-menu-link:hover, header .nav-menu-link:focus {
+.nav-menu-link:hover, .nav-menu-link:focus {
   transform: translateY(-10%);
   color: #66912c;
 }
-header .nav #opened-menu {
+.nav #opened-menu {
   visibility: visible;
   transform: scale(1);
 }
 @media screen and (max-width: 780px) {
-  header .nav #opened-menu {
+  .nav #opened-menu {
     width: 100vw;
   }
 }
 
 footer {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr 0.2fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 0 50px;
-  padding: 25px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 50px;
   border-top: 1px #81b838 solid;
   border-top-right-radius: 80px 20px;
   background-color: rgba(129, 184, 56, 0.08);
 }
-@media screen and (max-width: 780px) {
-  footer {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 25px;
-  }
-}
-footer .fNav h3, footer .fNav p {
-  padding-bottom: 5px;
-}
-footer .fNav-about {
-  max-width: 440px;
-  grid-row: span 2;
-}
-footer .fNav-help {
-  max-width: 400px;
-  grid-column-start: 2;
-  grid-row-start: 2;
-}
-footer .fNav-social {
+footer .footer-social, footer .footer-nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  gap: 25px;
   width: fit-content;
-  grid-row: span 2;
   margin: auto;
-}
-footer ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 10px 20px;
-}
-@media screen and (max-width: 780px) {
-  footer ul {
-    flex-direction: column;
-  }
 }
 
 main {
   display: flex;
   gap: 25px;
-  padding: 55px;
+  padding: 55px 55px 85px 55px;
   animation: appear-opacity 400ms ease-in-out 50ms both;
 }
 @media screen and (max-width: 780px) {

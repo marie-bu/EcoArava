@@ -1,46 +1,18 @@
 footer {
-    display: grid;
-    grid-template-columns: 1.1fr 1fr 0.2fr;
-    grid-template-rows: 1fr 1fr;
-    gap : 0 50px;
-    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 50px;
     border-top: 1px $color-quaternary solid;
     border-top-right-radius: 80px 20px;
     background-color: rgba($color: $color-quaternary, $alpha: 0.08);
-    @include mobile {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 25px;
-    }
-    .fNav {
-        h3, p {
-            padding-bottom: 5px;
-        }
-        &-about {
-            max-width: 440px;
-            grid-row : span 2;
-        }
-        &-help {
-            max-width: 400px;
-            grid-column-start: 2;
-            grid-row-start: 2;
-        }
-        &-social {
+    .footer {
+        &-social, &-nav {
             display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+            gap: 25px;
             width: fit-content;
-            grid-row: span 2;
             margin: auto;
-        }
-    }
-    ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap : 10px 20px;
-        @include mobile {
-            flex-direction: column;
         }
     }
 }

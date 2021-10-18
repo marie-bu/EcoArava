@@ -1,18 +1,12 @@
 .btn {
-    &-footer {
-        @include button($color-primary, 0.75rem, 500, 12px);
-        background-color: white;
-        a {
-            color: $color-quaternary;
-        }
-    }
     &-social {
-        @include button-circle(none, 2rem, $color-quaternary, 0);
-        background-color: white;
+        @include button-circle(none, 1.5rem, $color-quaternary, 0);
+        background-color: $color-quaternary;
         box-shadow: 1px 1px 1px $color-primary;
-        margin-left: 10px;
         i {
-            line-height: 2rem;
+            line-height: 1.5rem;
+            font-size: 0.8rem;
+            color: white;
         }
         &:hover, &:focus {
             box-shadow: inset 1px 1px 1px $color-primary;

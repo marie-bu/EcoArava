@@ -82,33 +82,15 @@ header {
         text-transform: lowercase;
         text-align: center;
     }
-    .nav {
-        i {
-            font-size: 1.4rem;
-            color: white;
-        }
-        &-menu {
-            font-family: "Montserrat", sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            line-height: 0.8rem;
-            text-transform: uppercase;
-            &-link {
-                color: $color-quaternary;
-            }
-        }
-    }
 }
 
-footer {
-    color: $color-quaternary;
-    li, p {
-        font-size: 0.85rem;
-        font-weight: 500;
-        line-height: 0.9rem;
-        text-align: justify;
-    }
-    a {
+.nav-menu, .footer-nav {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 0.8rem;
+    text-transform: uppercase;
+    &-link {
         color: $color-quaternary;
     }
 }
